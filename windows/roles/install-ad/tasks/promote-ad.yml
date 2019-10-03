@@ -1,0 +1,9 @@
+---
+# DC promotion
+
+- name: dc promotion
+  win_domain:
+    create_dns_delegation=yes
+    dns_domain_name={{ ad_domain_name }}
+    safe_mode_password={{ ad_password }}
+  register: result

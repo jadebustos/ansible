@@ -1,0 +1,7 @@
+---
+- name: Changing ownership
+  file:
+    path: /home/jadebustos/.vim
+    recurse: yes
+    owner: jadebustos
+    group: jadebustos

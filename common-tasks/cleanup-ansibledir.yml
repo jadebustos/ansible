@@ -1,0 +1,10 @@
+---
+
+- name: "Clean up"
+  remote_user: root
+  hosts: all
+  gather_facts: False
+
+  tasks:
+    - name: "Remove ansible working dir"
+      file: path=/root/.ansible state=absent

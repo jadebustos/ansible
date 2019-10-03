@@ -1,0 +1,6 @@
+---
+- name: vim-go git repository cloning
+  git:
+    repo: https://github.com/fatih/vim-go.git
+    dest: /home/jadebustos/.vim/bundle/vim-go
+    force: yes

@@ -1,0 +1,4 @@
+---
+# AirLine: lean & mean status/tabline for vim that's light as air
+- include: airlinedirs.yml
+- include: airlinegit.yml

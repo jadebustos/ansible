@@ -1,0 +1,7 @@
+---
+- name: bufferexplorer directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/bufexplorer
+    owner: jadebustos
+    group: jadebustos
+    state: directory

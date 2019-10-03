@@ -1,0 +1,7 @@
+---
+- name: EnhCommentify directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/EnhCommentify.vim
+    owner: jadebustos
+    group: jadebustos
+    state: directory

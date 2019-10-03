@@ -1,0 +1,15 @@
+---
+
+- name: "Create user"
+  remote_user: root
+  hosts: all
+  gather_facts: False
+  vars_files:
+    - group_vars/create-user-vars.yml
+
+  tasks:
+    - name: "Creating user"
+      user:
+        name: "{{ user }}"
+        comment: "{{ gecos }}"
+        state: present

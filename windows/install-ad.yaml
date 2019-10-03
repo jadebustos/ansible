@@ -1,0 +1,10 @@
+---
+# install ad
+
+- name: ad installation
+  hosts: windows
+  vars_files:
+    - "group_vars/install-ad.yaml"
+  gather_facts: false
+  roles:
+    - install-ad

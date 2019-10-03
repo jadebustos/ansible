@@ -1,0 +1,7 @@
+---
+- name: ansible-vim directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/ansible-vim
+    owner: jadebustos
+    group: jadebustos
+    state: directory

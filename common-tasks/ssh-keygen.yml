@@ -1,0 +1,12 @@
+---
+
+- name: "SSH keys configuration"
+  remote_user: root
+  hosts: all
+  gather_facts: False
+  vars_files:
+    - group_vars/ssh-vars.yml
+
+  tasks:
+    - name: "SSH key generation"
+      user: name={{ ssh_user }} generate_ssh_key=yes ssh_key_bits={{ ssh_bits }} ssh_key_file={{ ssh_key_file }}

@@ -1,0 +1,6 @@
+---
+- name: python-mode git repository cloning
+  git:
+    repo: https://github.com/klen/python-mode.git
+    dest: /home/jadebustos/.vim/bundle/python-mode
+    force: yes

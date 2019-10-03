@@ -1,0 +1,7 @@
+---
+- name: auto-pairs directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/auto-pairs
+    owner: jadebustos
+    group: jadebustos
+    state: directory

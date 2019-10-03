@@ -1,0 +1,14 @@
+---
+- name: snipmate directory creation
+  vars:
+    snipmatedirs:
+      - /home/jadebustos/.vim/bundle/tlib_vim
+      - /home/jadebustos/.vim/bundle/vim-addon-mw-utils
+      - /home/jadebustos/.vim/bundle/vim-snipmate
+      - /home/jadebustos/.vim/bundle/vim-snippets
+  file:
+    path: "{{ item }}"
+    owner: jadebustos
+    group: jadebustos
+    state: directory
+  with_items: snipmatedirs

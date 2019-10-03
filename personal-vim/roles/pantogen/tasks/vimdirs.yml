@@ -1,0 +1,12 @@
+---
+- name: Vim directory creation
+  vars:
+    vimdirs:
+      - /home/jadebustos/.vim/autoload 
+      - /home/jadebustos/.vim/bundle
+  file:
+    path: "{{ item }}"
+    owner: jadebustos
+    group: jadebustos
+    state: directory
+  with_items: vimdirs

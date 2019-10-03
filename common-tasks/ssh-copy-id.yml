@@ -1,0 +1,14 @@
+---
+
+- name: "Copy rsa key to a host"
+  remote_user: root
+  hosts: all
+  gather_facts: False
+  vars_files:
+    - group_vars/ssh-vars.yml
+
+  tasks:
+    - name: "Copy RSA key to a host"
+      lineinfile:
+        dest="{{ user_dir }}".ssh/authorized_keys
+        line="{{ myrsa }}"

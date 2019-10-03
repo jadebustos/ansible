@@ -1,0 +1,5 @@
+---
+- hosts: client
+  tasks:
+  - name: Execute
+    command: ls

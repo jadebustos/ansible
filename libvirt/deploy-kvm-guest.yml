@@ -1,0 +1,19 @@
+---
+
+- name: "Deploying kvm guest"
+  remote_user: root
+  hosts: 127.0.0.1
+  connection: local
+  gather_facts: False
+  vars_files:
+    - group_vars/vmvars.yml
+
+  tasks:
+    - name: "Creating vm directory"
+      file: path="{{ vmspath }}/{{ hostname }}" state=directory owner=root group=root mode=0755
+    - shell: if [[ ! -f "{{ vmspath }}/{{ hostname }}/{{ hostname }}-rootvg.qcow2" ]]; then /bin/true; else /bin/false; fi;
+      register: result
+      ignore_errors: True
+    - name: "Cloning disk"
+      command: /usr/bin/cp {{ vmtemplate }} "{{ vmspath }}/{{ hostname }}/{{ hostname }}-rootvg.qcow2"
+      when: result|success

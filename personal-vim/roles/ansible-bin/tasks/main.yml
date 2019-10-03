@@ -1,0 +1,4 @@
+---
+# Vim syntax for Ansible playbooks:
+- include: ansible-vimdirs.yml
+- include: ansible-vimgit.yml

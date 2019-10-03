@@ -1,0 +1,4 @@
+---
+# AutoPairs plugin: (Auto coloms, brackers, ..)
+- include: auto-pairsdirs.yml
+- include: auto-pairsgit.yml

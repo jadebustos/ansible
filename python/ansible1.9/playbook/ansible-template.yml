@@ -1,0 +1,9 @@
+---
+- hosts: test
+  tasks:
+    - name: mytaskname
+      command: "{{ cmd }}"
+      async: 200
+      poll: 2
+      changed_when: False
+      always_run: yes

@@ -1,0 +1,241 @@
+" Minimal stuff
+"
+" 1. Pantogen: https://github.com/tpope/vim-pathogen (Plugin installer)
+" 	mkdir -p ~/.vim/autoload ~/.vim/bundle
+" 	curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+" 	cd .vim/bundle
+"
+" 2. NERDTree plugin: (Folder explorer)
+" 	git clone https://github.com/scrooloose/nerdtree.git
+"
+" 3a. TagList plugin: (Code logic navigator)
+" 	git clone https://github.com/vim-scripts/taglist.vim
+" 	yum install ctags cscope
+"
+" 3b. Tagbar plugin: (A class outline viewer for Vim)
+" 	git clone https://github.com/majutsushi/tagbar.git
+" 	yum install ctags cscope
+"
+" 4. AutoPairs plugin: (Auto coloms, brackers, ..)
+" 	git clone git://github.com/jiangmiao/auto-pairs.git 
+"
+" 5. Python-Mode plugin: (Python IDE tools)
+" 	git clone https://github.com/klen/python-mode.git
+"
+" 6. Enhaced Commentify plugin: (Easy code block comment)
+" 	git clone https://github.com/vim-scripts/EnhCommentify.vim.git
+"
+" 7. SuperTAB plugin: (autocomplete engine)
+" 	git clone https://github.com/ervandew/supertab.git
+"
+" 8. SnipMate forked plugin: (Code snippets insert)
+" 	git clone https://github.com/tomtom/tlib_vim.git
+" 	git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
+" 	git clone https://github.com/garbas/vim-snipmate.git
+" 	git clone https://github.com/honza/vim-snippets.git
+"
+" 9. BuffExporer plugin: (Easier buffer explorer)
+" 	git clone https://github.com/jlanzarotta/bufexplorer.git
+"
+" 10. Fugitive plugin: (Git functions)
+" 	git clone https://github.com/tpope/vim-fugitive.git
+"
+" 11. IndentLine: (Visual horizontal code indentation)
+" 	git clone https://github.com/Yggdroot/indentLine.git	
+"
+" 12. ControlP: (Another folder explorer and search tool)
+" 	git clone https://github.com/kien/ctrlp.vim
+"
+" 13. AirLine: lean & mean status/tabline for vim 
+" 	git clone https://github.com/vim-airline/vim-airline.git
+"
+" 14. Vim-Go: For Go lang programming
+" 	git clone https://github.com/fatih/vim-go.git
+" 	:GoInstallBinaries
+"
+" 15. Vim colorschemes
+" 	git clone https://github.com/flazz/vim-colorschemes.git
+"
+" 16. Vim syntax for Ansible playbooks:
+" 	git clone https://github.com/pearofducks/ansible-vim
+
+" ~~~~~~~~~~~~~~~~~~~
+" Enable Pantogen
+" ~~~~~~~~~~~~~~~~~~~
+
+filetype off
+
+call pathogen#infect()
+call pathogen#helptags()
+
+filetype plugin indent on
+syntax on
+
+" ~~~~~~~~~~~~~~~~
+" General settings
+" ~~~~~~~~~~~~~~~~
+
+" Color Schemes
+if has("gui_running")
+	setlocal background=dark
+else
+	" Gray pretty clear
+	"colorscheme murphy
+	
+	" Comments in high contrast
+	"colorscheme wombat
+	
+	" Keywords pink purpe
+	"colorscheme molokai
+	
+	" Similar to wombat less contrast
+	"colorscheme elflord
+	
+	" Comments in grey 
+	colorscheme jelleybeans
+endif
+
+" Change leader key
+let mapleader=","
+
+" buffer navigation
+nnoremap <silent> <TAB> :bn<CR>
+nnoremap <silent> <S-TAB> <C-w>w
+nnoremap <silent> <leader>b :BufExplorer<CR>
+
+" Leaer key + t -> open/close Tlist tree
+nnoremap <silent> <leader>t :TlistToggle<CR>
+
+" Leaer key + y -> open/close TagBar tree
+nnoremap <silent> <leader>y :TagbarToggle<CR>
+
+" Leader key + n -> open/close folder explorer
+nnoremap <silent> <leader>n :NERDTreeToggle<CR>
+
+" Enable columm limits with only one character
+highlight ColorColumn ctermbg=red
+call matchadd('ColorColumn', '\%81v', 100)
+
+
+" higlight the line where the cursor is
+set cursorline 
+" higlight the the column in 80 characters
+set colorcolumn=+1
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"  NERDTree settings
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+" Avoid listing of files like .pyc
+let NERDTreeIgnore = ['\.pyc$']
+
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Python Mode General Settings
+" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+" General help:
+" 1. Documentation: 
+" 	"K" in key word show help
+" 	"control-w w" cambia de buffer ciclicamente
+" 	"control-w j" cambia a buffer abajo
+" 	"control-w k" cambia a buffer arriba
+" 	"control-w c" cierra el buffer
+" 	"Number control-w <" decrement the panel to left Number times.
+" 	"control-w <" increment the panel to right
+" 	"control-w +" increment the panel to up
+" 	"control-w -" increment the panel to up
+" 2. Run the code:
+" 	"<leaderkey> r" the leader key and r runs the code
+" 3. Autocomplete:
+" 	"control space (in inserting mode)"
+" 4. Commnen/uncomment blocks:
+" 	"visual mode" ,c
+
+" Folders python-mode help:
+"
+" zf#j creates a fold from the cursor down # lines.
+" zf/string creates a fold from the cursor to string .
+" zj moves the cursor to the next fold.
+" zk moves the cursor to the previous fold.
+" zo opens a fold at the cursor.
+" zO opens all folds at the cursor.
+" zc close a fold at the cursor.
+" zm increases the foldlevel by one.
+" zr decreases the foldlevel by one.
+" zM CLOSES all open folds.
+" zR OPEN all folds in the buffer.
+" zd deletes the fold at the cursor.
+" zE deletes all folds.
+" [z move to start of open fold.
+" ]z move to end of open fold.
+
+" Disable python-mode folders
+"let g:pymode_folding = 0
+
+" Disable python-mode colorcolum and set own.
+let g:pymode_options_colorcolumn = 0
+
+" Disable python-mode Rope code completion, we use super tab.
+let g:pymode_rope = 0
+
+" ~~~~~~~~~~~~~~~~
+" SnipMate forked
+" ~~~~~~~~~~~~~~~~
+" http://stackoverflow.com/questions/6916250/can-we-use-multiple-snippet-files-for-given-filetype-in-vim
+" Available snippets: .vim/bundle/vim-snippets/snippets
+" Usage: <intert mode> cl <tab> 
+" Usage: https://github.com/honza/vim-snippets
+
+"~~~~~~~~~~~~~~
+" Fugitive plugin
+"~~~~~~~~~~~~~~
+
+"~~~~~~~~~~~~~~
+" BuffExporer 
+"~~~~~~~~~~~~~~
+"
+
+"~~~~~~~~~~~~~~
+" Commentify
+"~~~~~~~~~~~~~~
+" ESC v (visualmode selection) c
+
+"~~~~~~~~~~~~~~
+" IdentLine
+"~~~~~~~~~~~~~~
+" Note: display thin vertical lines at each indentation level for code
+
+" vertical line indentation for SPACES
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '│'
+
+" vertical line indentation for TAB
+set list lcs=tab:\|\ 
+
+"~~~~~~~~~~
+" ControlP
+"~~~~~~~~~~
+
+" Use <leader>t to open ctrlp
+let g:ctrlp_map = '<leader>p'
+" Ignore these directories
+set wildignore+=*/build/**
+" disable caching
+let g:ctrlp_use_caching=0
+
+"~~~~~~~~
+" Airline enablement
+"~~~~~~~~
+set laststatus=2
+
+"~~~~~~~~
+" Others
+"~~~~~~~~
+
+" cool colors
+set t_Co=256
+
+" indent for YAML files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+

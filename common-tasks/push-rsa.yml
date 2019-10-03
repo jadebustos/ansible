@@ -1,0 +1,15 @@
+---
+
+- name: "Pushing rsa key to user"
+  remote_user: root
+  hosts: all
+  gather_facts: False
+  vars_files:
+    - group_vars/push-rsa-vars.yml
+
+  tasks:
+    - name: "Pushing rsa key"
+      authorized_key:
+        user: "{{ user }}"
+        state: present
+        key: "{{ lookup('file', 'files/id_rsa.pub') }}"

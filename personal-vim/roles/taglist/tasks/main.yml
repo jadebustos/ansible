@@ -1,0 +1,3 @@
+---
+- include: taglistdirs.yml
+- include: taglistgit.yml

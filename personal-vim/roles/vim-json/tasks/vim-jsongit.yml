@@ -1,0 +1,6 @@
+---
+- name: vim-json git repository cloning
+  git:
+    repo: https://github.com/elzr/vim-json.git
+    dest: /home/jadebustos/.vim/bundle/vim-json
+    force: yes

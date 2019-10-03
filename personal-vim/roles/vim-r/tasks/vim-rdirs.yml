@@ -1,0 +1,7 @@
+---
+- name: vim-r directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/Vim-R-plugin
+    owner: jadebustos
+    group: jadebustos
+    state: directory

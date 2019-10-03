@@ -1,0 +1,9 @@
+---
+
+displayname: ansibletest
+hostname: myhostname
+domain: mydomain
+uuid: b2b5912d-24a5-492c-9443-d779a36e02c4
+vmspath: /media/mainbackup/VMs
+vmtemplate: /media/mainbackup/VMs/templates/rhel7.1-template.qcow2
+gateway: 192.168.122.1

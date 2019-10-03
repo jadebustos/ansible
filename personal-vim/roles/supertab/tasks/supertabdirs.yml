@@ -1,0 +1,7 @@
+---
+- name: supertab directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/supertab
+    owner: jadebustos
+    group: jadebustos
+    state: directory

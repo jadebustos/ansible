@@ -1,0 +1,9 @@
+---
+# Reboot
+
+- name: reboot
+  raw: shutdown /r
+  when: result|changed
+  async: 0
+  poll: 0
+  ignore_errors: true

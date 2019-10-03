@@ -1,0 +1,6 @@
+---
+- name: EnhCommentify git repository cloning
+  git:
+    repo: https://github.com/vim-scripts/EnhCommentify.vim.git
+    dest: /home/jadebustos/.vim/bundle/EnhCommentify.vim
+    force: yes

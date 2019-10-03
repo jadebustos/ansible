@@ -1,0 +1,7 @@
+---
+- name: Vim directory creation
+  get_url:
+    url: https://tpo.pe/pathogen.vim
+    dest: /home/jadebustos/.vim/autoload/pathogen.vim
+    owner: jadebustos
+    group: jadebustos

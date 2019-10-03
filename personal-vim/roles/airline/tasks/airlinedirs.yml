@@ -1,0 +1,7 @@
+---
+- name: airline directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/vim-airline
+    owner: jadebustos
+    group: jadebustos
+    state: directory

@@ -1,0 +1,6 @@
+---
+- name: supertab git repository cloning
+  git:
+    repo: https://github.com/ervandew/supertab.git
+    dest: /home/jadebustos/.vim/bundle/supertab
+    force: yes

@@ -1,0 +1,6 @@
+---
+- name: airline git repository cloning
+  git:
+    repo: https://github.com/bling/vim-airline
+    dest: /home/jadebustos/.vim/bundle/vim-airline
+    force: yes

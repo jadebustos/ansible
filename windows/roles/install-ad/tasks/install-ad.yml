@@ -1,0 +1,9 @@
+---
+# AD installation
+
+- name: ad installation
+  win_feature:
+    name: "AD-Domain-Services"
+    include_management_tools: yes
+    include_sub_features: yes
+    state: present

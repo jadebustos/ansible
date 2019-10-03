@@ -1,0 +1,8 @@
+---
+- name: vimrc file
+  copy:
+    src: files/vimrc
+    dest: /home/jadebustos/.vimrc
+    owner: jadebustos
+    group: jadebustos
+    force: yes

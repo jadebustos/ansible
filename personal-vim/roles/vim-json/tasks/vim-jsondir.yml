@@ -1,0 +1,7 @@
+---
+- name: vim-json directory creation
+  file:
+    path: /home/jadebustos/.vim/bundle/vim-json
+    owner: jadebustos
+    group: jadebustos
+    state: directory

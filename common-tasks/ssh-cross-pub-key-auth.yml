@@ -1,0 +1,16 @@
+---
+
+- name: "SSH public key cross authentication (root)"
+  remote_user: root
+  hosts: all
+  gather_facts: False
+  vars_files:
+    - group_vars/ssh-vars.yml
+
+  tasks:
+    - name: "Getting public RSA keys from server"
+      fetch: src={{ user_dir }}.ssh/id_rsa.pub dest=files/ssh/id_rsa-{{ inventory_hostname }} flat=yes
+    - name: "Creating authorized keys for servers"
+      local_action: "assemble src=files/ssh dest=files/authorized_keys-all"
+    - name: "Copying authorized keys to servers"
+      copy: src=files/authorized_keys-all dest=.ssh/authorized_keys

@@ -1,0 +1,21 @@
+---
+- name: snipmate git repository (tlib_vim) cloning
+  git:
+    repo: https://github.com/tomtom/tlib_vim.git
+    dest: /home/jadebustos/.vim/bundle/tlib_vim
+    force: yes
+- name: snipmate git repository (tlib_vim) cloning
+  git:
+    repo: https://github.com/MarcWeber/vim-addon-mw-utils.git
+    dest: /home/jadebustos/.vim/bundle/vim-addon-mw-utils
+    force: yes
+- name: snipmate git repository (vim-snipmate) cloning
+  git:
+    repo: https://github.com/garbas/vim-snipmate.git
+    dest: /home/jadebustos/.vim/bundle/vim-snipmate
+    force: yes
+- name: snipmate git repository (vim-snippets) cloning
+  git:
+    repo: https://github.com/honza/vim-snippets.git
+    dest: /home/jadebustos/.vim/bundle/vim-snippets
+    force: yes

@@ -1,0 +1,4 @@
+---
+# SnipMate forked plugin: (Code snippets insert)
+- include: snipmatedirs.yml
+- include: snipmategit.yml
