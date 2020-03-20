@@ -1,0 +1,5 @@
+---
+
+- include_tasks: 01-build.yml
+  when: ansible_distribution == 'Debian'
+  tags: coral

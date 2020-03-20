@@ -8,3 +8,4 @@ These playbooks are intended to be used in Fedora and Debian (Buster).
 * **debian** to install generic software on Debian.
 * **development** to install software related to development.
 * **containers** to install software related to containers.
+* **coral** to install software to flash Google's coral board.

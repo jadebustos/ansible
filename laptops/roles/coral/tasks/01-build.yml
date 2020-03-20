@@ -1,0 +1,29 @@
+---
+# https://coral.googlesource.com/docs/+/refs/heads/master/GettingStarted.md
+
+- name: install container packages
+  apt:
+    name: "{{ containers_deb }}"
+    state: present
+
+- name: install coral build packages
+  apt:
+    name: "{{ build_coral_deb }}"
+    state: present
+
+- name: Adding user {{ docker_user }} to docker group
+  user:
+    name: "{{ docker_user }}"
+    groups: "{{ debian_docker_group }}"
+    append: yes
+
+- name: udev rules
+  copy:
+    src: 65-android-local.rules
+    dest: /etc/udev/rules.d/65-android-local.rules
+    owner: root
+    group: root
+    mode: 0644
+
+- name: reload udev rules
+  shell: "/usr/bin/udevadm control --reload-rules  && /usr/bin/udevadm trigger"
