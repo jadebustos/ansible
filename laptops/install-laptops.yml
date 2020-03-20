@@ -6,6 +6,7 @@
     - "group_vars/debian.yml"
     - "group_vars/x240.yml"
     - "group_vars/development.yml"
+    - "group_vars/containers.yml"
   gather_facts: true
   roles:
     - role: x240
@@ -15,3 +16,6 @@
     - role: development
       tags:
         - development
+    - role: containers
+      tags:
+        - containers

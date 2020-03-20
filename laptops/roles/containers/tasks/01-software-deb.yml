@@ -1,0 +1,6 @@
+---
+
+- name: install container packages
+  apt:
+    name: "{{ containers_deb }}"
+    state: present
