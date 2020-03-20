@@ -1,0 +1,6 @@
+---
+
+- name: install development packages
+  apt:
+    name: "{{ development_deb }}"
+    state: present

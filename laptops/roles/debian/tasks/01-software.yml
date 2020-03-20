@@ -1,0 +1,11 @@
+---
+
+- name: install gnome packages
+  apt:
+    name: "{{ gnome_deb }}"
+    state: present
+
+- name: install utilities packages
+  apt:
+    name: "{{ utils_deb }}"
+    state: present

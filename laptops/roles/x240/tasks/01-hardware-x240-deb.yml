@@ -1,0 +1,6 @@
+---
+
+- name: install hardware packages
+  apt:
+    name: "{{ x240_hardware_deb }}"
+    state: present

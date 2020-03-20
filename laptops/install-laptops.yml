@@ -1,0 +1,17 @@
+---
+
+- name: install software
+  hosts: all
+  vars_files:
+    - "group_vars/debian.yml"
+    - "group_vars/x240.yml"
+    - "group_vars/development.yml"
+  gather_facts: true
+  roles:
+    - role: x240
+      tags:
+        - x240
+        - debian
+    - role: development
+      tags:
+        - development

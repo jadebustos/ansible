@@ -1,0 +1,3 @@
+---
+
+x240_hardware_deb: ['xserver-xorg-input-synaptics', 'firmware-iwlwifi', 'firmware-misc-nonfree']
