@@ -1,3 +1,8 @@
 ---
 
 containers_deb: ['qemu-user-static', 'docker.io']
+
+# user
+docker_user: 'jadebustos'
+
+debian_docker_group: 'docker'

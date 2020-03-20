@@ -1,0 +1,8 @@
+---
+
+- name: Adding user {{ docker_user }} to docker group
+  user:
+    name: "{{ docker_user }}"
+    groups: "{{ debian_docker_group }}"
+    append: yes
+  when: ansible_distribution == 'Debian'
