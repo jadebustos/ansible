@@ -2,4 +2,4 @@
 
 gnome_deb: ['gnome-tweaks', 'mc', 'screen', 'vim']
 
-utils_deb: ['mc', 'screen', 'vim']
+utils_deb: ['mc', 'screen', 'vim', 'curl']
