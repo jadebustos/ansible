@@ -6,11 +6,6 @@
     name: "{{ containers_deb }}"
     state: present
 
-- name: install coral build packages
-  apt:
-    name: "{{ build_coral_deb }}"
-    state: present
-
 - name: Adding user {{ docker_user }} to docker group
   user:
     name: "{{ docker_user }}"
@@ -27,3 +22,25 @@
 
 - name: reload udev rules
   shell: "/usr/bin/udevadm control --reload-rules  && /usr/bin/udevadm trigger"
+
+- name: mdt repository
+  copy:
+    src: mdt.list
+    dest: /etc/apt/sources.list.d/mdt.list
+    owner: root
+    group: root
+    mode: 0644
+
+- name: add google keys
+  shell: "curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -"
+
+- name: update packages
+  apt:
+    name: '*'
+    upgrade: 'yes'
+    state: latest
+
+- name: install coral build packages
+  apt:
+    name: "{{ build_coral_deb }}"
+    state: present

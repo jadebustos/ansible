@@ -1,5 +1,5 @@
 ---
 
-latex_rpm: ['texlive-xwatermark', 'texlive-framed']
+latex_rpm: ['texlive-draftwatermark', 'texlive-xwatermark', 'texlive-framed']
 
 utils_rpm: ['mc', 'screen', 'vim', 'curl']
