@@ -1,2 +1,1 @@
-[x240]
-192.168.1.61 ansible_user=root
+localhost ansible_user=root

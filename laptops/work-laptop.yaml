@@ -1,0 +1,9 @@
+---
+
+- name: install software (work laptop)
+  hosts: all
+  vars_files:
+    - "group_vars/vpn.yaml"
+  gather_facts: false
+  roles:
+    - vpn
