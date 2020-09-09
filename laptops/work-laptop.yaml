@@ -8,4 +8,5 @@
   gather_facts: false
   roles:
     - general
+    - vcode
 #    - vpn

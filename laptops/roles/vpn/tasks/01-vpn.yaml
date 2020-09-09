@@ -1,7 +1,7 @@
 ---
   
 - name: install vpn rpm packages
-  yum:
+  dnf:
     name: "{{ vpn_rpms }}"
     state: present
 

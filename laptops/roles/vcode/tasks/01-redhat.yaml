@@ -1,0 +1,19 @@
+---
+  
+- name: import microsoft gpgkey
+  shell: /usr/bin/rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+- name: create vcode repo file
+  copy:
+    src: vscode.repo
+    dest: /etc/yum.repos.d/vscode.repo
+    owner: root
+    group: root
+    mode: 0644
+    setype: system_conf_t
+
+- name: install vscode
+  dnf:
+    name: code
+    state: present
+    update_cache: yes
