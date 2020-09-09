@@ -1,0 +1,30 @@
+[connection]
+id={{ vpn_redhat_name }}
+uuid=0ef6689b-faaf-497d-99d0-ddb853df5438
+type=vpn
+autoconnect=false
+permissions=
+secondaries=
+
+[vpn]
+service-type=org.freedesktop.NetworkManager.openvpn
+connection-type=password
+password-flags=3
+tunnel-mtu=1360
+cipher=AES-256-CBC
+proto-tcp=yes
+remote={{ vpn_redhat_gateway }}
+reneg-seconds=0
+port=443
+ca=/etc/pki/tls/certs/{{ vpn_redhat_cert }}
+tls-remote={{ vpn_redhat_tls_remote }}
+username={{ vpn_redhat_user }}
+
+[ipv4]
+method=auto
+never-default=true
+
+[ipv6]
+method=auto
+never-default=true
+
