@@ -19,3 +19,8 @@
   dnf:
     name: "{{ office_rpms }}"
     state: present
+
+- name: configure rpm fussion
+  dnf:
+    name: "{{ rpmfusion_rpm }}"
+    state: present
