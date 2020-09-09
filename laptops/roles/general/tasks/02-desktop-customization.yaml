@@ -1,5 +1,9 @@
 ---
 
+- name: configure timezone
+  timezone:
+    name: "{{ timezone }}"
+
 - name: define backgrounds
   copy:
     src: "{{ item }}"
