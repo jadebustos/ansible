@@ -1,0 +1,43 @@
+---
+
+- name: define backgrounds
+  copy:
+    src: "{{ item }}"
+    dest: /usr/share/gnome-background-properties/
+    owner: root
+    group: root
+    mode: 0644
+    setype: usr_t
+  with_items:
+    - "cernicalos-backgrounds.xml"
+
+- name: copy xml background images
+  copy:
+    src: "{{ item }}"
+    dest: /usr/share/backgrounds/
+    owner: root
+    group: root
+    mode: 0644
+    setype: usr_t
+  with_items:
+    - "cernicalos.xml"
+
+- name: copy background images
+  copy:
+    src: "{{ item }}"
+    dest: /usr/share/backgrounds/
+    owner: root
+    group: root
+    mode: 0644
+    setype: usr_t
+  with_items:
+    - "cernicalos.png"
+
+- name: change default background image
+  lineinfile:
+    path: /usr/share/glib-2.0/schemas/10_org.gnome.desktop.background.fedora.gschema.override
+    regexp: '^picture-uri='
+    line: picture-uri='file:///usr/share/backgrounds/cernicalos.xml'
+
+- name: compile gnome schemas
+  shell: /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/

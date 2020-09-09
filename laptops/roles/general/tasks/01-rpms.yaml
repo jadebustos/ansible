@@ -1,0 +1,21 @@
+---
+  
+- name: install common rpm packages
+  yum:
+    name: "{{ common_rpms }}"
+    state: present
+
+- name: install dev rpm packages
+  yum:
+    name: "{{ dev_rpms }}"
+    state: present
+
+- name: install gnome rpm packages
+  yum:
+    name: "{{ gnome_rpms }}"
+    state: present
+
+- name: install office rpm packages
+  yum:
+    name: "{{ office_rpms }}"
+    state: present

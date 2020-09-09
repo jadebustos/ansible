@@ -1,0 +1,10 @@
+---
+
+timezone: 'Europe/Madrid'
+
+systemd_services: ['firewalld']
+
+common_rpms: ['ca-certificates', 'bind-utils', 'chrony', 'curl', 'vim', 'wget', 'telnet', 'net-tools', 'rsync', 'zsh', 'ftp', 'bash', 'bash-completion', 'mc']
+dev_rpms: ['git', 'go', 'automake']
+gnome_rpms: ['gnome-control-center', 'network-manager-applet', 'gnome-tweaks', 'gnome-abrt', 'gnome-system-monitor','gnome-getting-started-docs-es', 'gnome-backgrounds', 'gnome-backgrounds-extras', 'gnome-font-viewer', 'gnome-themes-standard', 'gnome-remote-desktop']
+office_rpms: ['firefox', 'gedit', 'libreoffice-core', 'libreoffice-base', 'libreoffice-data', 'libreoffice-calc', 'libreoffice-impress', 'libreoffice-math', 'libreoffice-writer','libreoffice-draw','libreoffice-help-es','libreoffice-langpack-es', 'libreoffice-opensymbol-fonts', 'libreoffice-gtk3', 'libreoffice-pdfimport', 'libreoffice-filters', 'chromium', 'gimp', 'keepassx']

@@ -1,0 +1,16 @@
+---
+
+- name: enable systemd services
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+    masked: no
+  with_items:
+    - "{{ systemd_services }}"
+
+- name: disable ssh
+  systemd:
+    name: sshd
+    enabled: no
+    masked: no
