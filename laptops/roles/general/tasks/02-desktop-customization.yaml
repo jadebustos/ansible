@@ -4,6 +4,15 @@
   timezone:
     name: "{{ timezone }}"
 
+- name: host file
+  copy:
+    src: hosts
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 0644
+    setype: net_conf_t
+
 - name: define backgrounds
   copy:
     src: "{{ item }}"
