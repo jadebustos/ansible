@@ -20,6 +20,11 @@
     name: "{{ office_rpms }}"
     state: present
 
+- name: install webcam rpm packages
+  dnf:
+    name: "{{ webcam_rpms }}"
+    state: present
+
 - name: install printing rpms
   dnf:
     name: "{{ printing_rpms }}"
