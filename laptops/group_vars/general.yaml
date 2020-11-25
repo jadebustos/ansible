@@ -9,6 +9,7 @@ systemd_services: ['firewalld', 'cockpit']
 rpmfusion_rpm: 'https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-32.noarch.rpm'
 
 common_rpms: ['ca-certificates', 'bind-utils', 'chrony', 'curl', 'vim', 'wget', 'telnet', 'net-tools', 'rsync', 'zsh', 'ftp', 'bash', 'bash-completion', 'mc', 'cockpit', 'cockpit-machines', 'cockpit-networkmanager', 'cockpit-packagekit', 'cockpit-selinux', 'cockpit-system', 'cockpit-ws']
+printing_rpms: ['cups', 'libjpeg-devel', 'cups-devel', 'cups-devel', 'libusb1-devel', 'sane-backends-devel', 'avahi-devel', 'net-snmp-devel', 'openssl-devel', 'python3-PyQt4', 'libtool', 'rpm-build']
 dev_rpms: ['git', 'go', 'automake']
 gnome_rpms: ['virt-viewer', 'gnome-control-center', 'network-manager-applet', 'gnome-tweaks', 'gnome-abrt', 'gnome-system-monitor','gnome-getting-started-docs-es', 'gnome-backgrounds', 'gnome-backgrounds-extras', 'gnome-font-viewer', 'gnome-themes-standard', 'gnome-remote-desktop']
 office_rpms: ['firefox', 'gedit', 'libreoffice-core', 'libreoffice-base', 'libreoffice-data', 'libreoffice-calc', 'libreoffice-impress', 'libreoffice-math', 'libreoffice-writer','libreoffice-draw','libreoffice-help-es','libreoffice-langpack-es', 'libreoffice-opensymbol-fonts', 'libreoffice-gtk3', 'libreoffice-pdfimport', 'libreoffice-filters', 'chromium', 'gimp', 'keepassx']

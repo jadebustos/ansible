@@ -1,5 +1,7 @@
 ---
 
+devel: ['make', 'gcc', 'gcc-c++']
+
 latex_rpm: ['texlive-draftwatermark', 'texlive-xwatermark', 'texlive-framed']
 
-utils_rpm: ['mc', 'screen', 'vim', 'curl']
+utils_rpm: ['mc', 'screen', 'vim', 'curl', 'keepassx', 'wireshark']

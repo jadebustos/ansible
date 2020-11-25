@@ -20,6 +20,11 @@
     name: "{{ office_rpms }}"
     state: present
 
+- name: install printing rpms
+  dnf:
+    name: "{{ printing_rpms }}"
+    state: present
+
 - name: configure rpm fussion
   dnf:
     name: "{{ rpmfusion_rpm }}"
