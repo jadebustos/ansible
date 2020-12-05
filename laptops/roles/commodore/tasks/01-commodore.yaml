@@ -1,0 +1,7 @@
+---
+
+- name: install commodore software
+  apt:
+    name: "{{ commodore_debs }}"
+    state: present
+    update_cache: yes

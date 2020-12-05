@@ -1,0 +1,9 @@
+---
+
+- name: install software for commodore development
+  hosts: all
+  vars_files:
+    - "group_vars/retrodev.yaml"
+  gather_facts: false
+  roles:
+    - commodore
