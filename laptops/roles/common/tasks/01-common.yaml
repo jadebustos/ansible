@@ -1,0 +1,26 @@
+---
+
+- name: create user
+  user:
+    name: "{{ os_user }}"
+    generate_ssh_key: yes
+    ssh_key_bits: 4096
+    ssh_key_file: .ssh/id_rsa
+    state: present
+    password: "{{ os_password }}"
+
+- name: passwordless sudo
+  template:
+    src: sudoers.j2
+    dest: "/etc/sudoers.d/{{ os_user }}"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copy public key to os_user
+  copy:
+    src: id_rsa.pub
+    dest: "/home/{{ os_user }}/.ssh/authorized_keys"
+    owner: "{{ os_user }}"
+    group: "{{ os_user }}"
+    mode: '0600'

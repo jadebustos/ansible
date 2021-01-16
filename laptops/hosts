@@ -1,1 +1,6 @@
-localhost ansible_user=root
+[all:vars]
+ansible_user=jadebustos
+ansible_python_interpreter=/usr/bin/python3
+
+[lab]
+192.168.1.150 ansible_user=root

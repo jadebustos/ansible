@@ -1,0 +1,27 @@
+---
+  
+- name: install common rpm packages
+  dnf:
+    name: "{{ common_rpms }}"
+    state: present
+  when: ansible_os_family == 'RedHat'
+
+- name: enable systemd services
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+    masked: no
+  with_items:
+    - "{{ systemd_services }}"
+  when: ansible_os_family == 'RedHat'
+
+- name: enable firewall ports
+  firewalld:
+    service: "{{ item }}"
+    permanent: yes
+    state: enabled
+    immediate: yes
+  with_items:
+    - "{{ firewalld_services }}"
+  when: ansible_os_family == 'RedHat'
