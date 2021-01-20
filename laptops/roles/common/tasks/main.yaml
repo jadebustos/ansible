@@ -1,0 +1,5 @@
+---
+
+- include_tasks: 01-common.yaml
+- include_tasks: 02-redhat.yaml
+- include_tasks: 99-hardening.yaml
