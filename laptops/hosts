@@ -1,6 +1,13 @@
 [all:vars]
+<<<<<<< HEAD
+ansible_python_interpreter=/usr/bin/python3
+
+[laptop]
+localhost ansible_user=root
+=======
 ansible_user=jadebustos
 ansible_python_interpreter=/usr/bin/python3
 
 [lab]
 192.168.1.150 ansible_user=root
+>>>>>>> f21205618815000e0e3025cf18741aeca9bc610a

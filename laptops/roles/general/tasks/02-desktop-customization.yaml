@@ -4,14 +4,32 @@
   timezone:
     name: "{{ timezone }}"
 
-- name: host file
-  copy:
-    src: hosts
-    dest: /etc/hosts
+#- name: host file
+#  copy:
+#    src: hosts
+#    dest: /etc/hosts
+#    owner: root
+#    group: root
+#    mode: 0644
+#    setype: net_conf_t
+
+- name: create mount points
+  file:
+    path: "{{ item.value.dir }}"
+    state: directory
     owner: root
     group: root
-    mode: 0644
-    setype: net_conf_t
+    mode: '0755'
+    setype: 'mnt_t'
+  with_dict:
+    - "{{ filesystems }}"
+
+- name: add fstab mount points
+  lineinfile:
+    path: /etc/fstab
+    line: "UUID={{ item.value.fs_uuid }}  {{ item.value.dir }}  xfs   defaults,noauto,user  1 2"
+  with_dict:
+    - "{{ filesystems }}"
 
 - name: define backgrounds
   copy:

@@ -3,6 +3,7 @@
 os_user: 'jadebustos'
 # openssl rand -base64 size <-- salt
 # openssl passwd -6 -salt xyz password <-- password
+# password personal
 os_password: '$6$Dtf6Jqq5hM9csj4i$BPYcgMjPPi2wDEeOcvlOgWT3rfnDHMRh5Yw5tAF7BjAiIID50YmWIj8FlitIz.XXzBzwKKRFnDoOAfxkoDqUH.'
 
 timezone: 'Europe/Madrid'
