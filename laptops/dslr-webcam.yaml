@@ -1,0 +1,9 @@
+---
+
+- name: configure laptop to use a dslr cam as a webcam
+  hosts: all
+  vars_files:
+    - "group_vars/dslr-webcam.yaml"
+  gather_facts: true
+  roles:
+    - dslr-webcam

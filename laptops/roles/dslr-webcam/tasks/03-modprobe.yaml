@@ -1,0 +1,21 @@
+---
+
+- name: configure modprobe
+  copy:
+    src: dslr-webcam.conf
+    dest: /etc/modprobe.d/dslr-webcam.conf
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+
+- name: /etc/modules configuration
+  lineinfile:
+    path: /etc/modules
+    line: 'dslr-webcam'
+  become: yes
+
+- name: regenerate initrd
+  command: "/usr/sbin/update-initramfs -u"
+  become: yes
+  when: ansible_os_family == 'Debian'

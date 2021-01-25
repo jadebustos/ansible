@@ -1,0 +1,5 @@
+---
+
+dslr_debs: ['gphoto2', 'v4l2loopback-utils', 'v4l2loopback-dkms', 'ffmpeg']
+
+dslr_rpms: ['gphoto2', 'v4l2loopback', 'ffmpeg']

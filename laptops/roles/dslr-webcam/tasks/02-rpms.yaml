@@ -1,0 +1,8 @@
+---
+
+- name: rpms installation
+  dnf:
+    name: "{{ dslr_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
