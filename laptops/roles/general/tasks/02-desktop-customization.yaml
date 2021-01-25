@@ -3,6 +3,7 @@
 - name: configure timezone
   timezone:
     name: "{{ timezone }}"
+  become: yes
 
 #- name: host file
 #  copy:
@@ -21,6 +22,7 @@
     group: root
     mode: '0755'
     setype: 'mnt_t'
+  become: yes
   with_dict:
     - "{{ filesystems }}"
 
@@ -28,6 +30,7 @@
   lineinfile:
     path: /etc/fstab
     line: "UUID={{ item.value.fs_uuid }}  {{ item.value.dir }}  xfs   defaults,noauto,user  1 2"
+  become: yes
   with_dict:
     - "{{ filesystems }}"
 
@@ -39,6 +42,7 @@
     group: root
     mode: 0644
     setype: usr_t
+  become: yes
   with_items:
     - "cernicalos-backgrounds.xml"
 
@@ -50,6 +54,7 @@
     group: root
     mode: 0644
     setype: usr_t
+  become: yes
   with_items:
     - "cernicalos.xml"
 
@@ -61,6 +66,7 @@
     group: root
     mode: 0644
     setype: usr_t
+  become: yes
   with_items:
     - "cernicalos.png"
 
@@ -69,6 +75,8 @@
     path: /usr/share/glib-2.0/schemas/10_org.gnome.desktop.background.fedora.gschema.override
     regexp: '^picture-uri='
     line: picture-uri='file:///usr/share/backgrounds/cernicalos.xml'
+  become: yes
 
 - name: compile gnome schemas
   shell: /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/
+  become: yes

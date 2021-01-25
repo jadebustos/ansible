@@ -1,0 +1,13 @@
+---
+
+- name: copy backup scripts
+  get_url:
+    url: "{{ item.value.url }}"
+    dest: "{{ item.value.path }}"
+    owner: root
+    group: root
+    mode: 0755
+    setype: 'bin_t'
+  become: yes
+  with_dict:
+    - "{{ scripts_backup }}"

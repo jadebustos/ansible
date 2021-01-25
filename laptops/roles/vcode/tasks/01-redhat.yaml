@@ -2,6 +2,7 @@
   
 - name: import microsoft gpgkey
   shell: /usr/bin/rpm --import https://packages.microsoft.com/keys/microsoft.asc
+  become: yes
 
 - name: create vcode repo file
   copy:
@@ -11,9 +12,11 @@
     group: root
     mode: 0644
     setype: system_conf_t
+  become:yes
 
 - name: install vscode
   dnf:
     name: code
     state: present
     update_cache: yes
+  become: yes

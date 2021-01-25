@@ -3,3 +3,4 @@
 - include_tasks: 01-rpms.yaml
 - include_tasks: 02-desktop-customization.yaml
 - include_tasks: 03-services.yaml
+- include_tasks: 04-backup.yaml

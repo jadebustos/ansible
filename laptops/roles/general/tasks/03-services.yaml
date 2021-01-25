@@ -6,6 +6,7 @@
     state: started
     enabled: yes
     masked: no
+  become: yes
   with_items:
     - "{{ systemd_services }}"
 
@@ -14,3 +15,4 @@
     name: sshd
     enabled: no
     masked: no
+  become: yes

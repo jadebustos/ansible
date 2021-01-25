@@ -23,3 +23,11 @@ filesystems:
   bcksecundario:
     fs_uuid: 'f5c8a595-59e0-4304-947c-678c14ef00a2'
     dir: '/media/work'
+
+scripts_backup: 
+  laptop:
+    url: 'https://raw.githubusercontent.com/jadebustos/misc/master/backup/backup-laptop.sh'
+    path: '/usr/local/bin/backup-laptop'
+  mainbackup:
+    url: 'https://raw.githubusercontent.com/jadebustos/misc/master/backup/backup-mainbackup.sh'
+    path: '/usr/local/bin/backup-mainbackup'
