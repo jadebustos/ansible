@@ -5,7 +5,7 @@
   vars_files:
     - "group_vars/general.yaml"
     - "group_vars/vpn.yaml"
-  gather_facts: false
+  gather_facts: true
   roles:
     - general
     - vcode
