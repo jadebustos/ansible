@@ -1,0 +1,44 @@
+---
+
+- name: downloading telegram
+  get_url:
+    url: "{{ telegram_url }}"
+    dest: '/tmp/telegram.xz'
+    mode: 0644
+
+- name: uncompressing telegram
+  unarchive:
+    src: '/tmp/telegram.xz'
+    dest: '/tmp'
+    remote_src: true
+
+- name: copy telegram to /usr/local/bin
+  copy:
+    src: "/tmp/Telegram/{{ item.file }}"
+    dest: "/usr/local/bin/{{ item.file }}"
+    owner: root
+    group: root
+    mode: "{{ item.mode }}"
+    setype: bin_t
+    remote_src: true
+  become: yes
+  with_items:
+    - { 'file': 'Telegram', 'mode': '0755' }
+    - { 'file': 'Updater', 'mode': '0775' }
+
+- name: deleting telegram downloaded files
+  file:
+    path: "{{ item }}"
+    state: absent
+  with_items:
+    - "/tmp/telegram.xz"
+    - "/tmp/Telegram"
+
+- name: creating telegram desktop icon
+  copy:
+    src: Telegram_Desktop.desktop
+    dest: /home/jadebustos/.local/share/applications
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0664
+    setype: data_home_t
