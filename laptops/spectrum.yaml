@@ -1,0 +1,9 @@
+---
+
+- name: install spectrum software
+  hosts: all
+  vars_files:
+    - "group_vars/spectrum.yaml"
+  gather_facts: true
+  roles:
+    - spectrum

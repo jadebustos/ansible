@@ -1,0 +1,5 @@
+---
+
+development_debs: ['autotools-dev', 'make', 'gcc']
+
+zesarux_debs: ['xorg-dev', 'libncurses-dev', 'libc6-dev']

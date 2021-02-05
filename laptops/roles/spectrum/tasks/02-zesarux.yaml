@@ -1,0 +1,8 @@
+---
+
+- name: installing zesarux packages
+  apt:
+    name: "{{ zesarux_debs }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'Debian'

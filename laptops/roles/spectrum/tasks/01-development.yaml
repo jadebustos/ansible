@@ -1,0 +1,8 @@
+---
+
+- name: installing development packages
+  apt:
+    name: "{{ development_debs }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'Debian'
