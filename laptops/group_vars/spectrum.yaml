@@ -3,3 +3,7 @@
 development_debs: ['autotools-dev', 'make', 'gcc']
 
 zesarux_debs: ['xorg-dev', 'libncurses-dev', 'libc6-dev']
+
+zesarux_src: 'https://github.com/chernandezba/zesarux/releases/download/9.1/ZEsarUX_src-9.1.tar.gz'
+zesarux_dirname: 'ZEsarUX-9.1'
+zesarux_tgz: 'ZEsarUX_src-9.1.tar.gz'

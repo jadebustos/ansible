@@ -6,3 +6,41 @@
     state: present
   become: true
   when: ansible_os_family == 'Debian'
+
+- name: downloading zesarux source
+  get_url:
+    url: "{{ zesarux_src }}"
+    dest: '/tmp'
+
+- name: uncompressing zesarux source
+  unarchive:
+    src: "/tmp/{{ zesarux_tgz }}"
+    dest: '/tmp'
+    remote_src: true
+
+- name: compiling zesarux (configure)
+  command:
+    cmd: "./configure"
+    chdir: "/tmp/{{ zesarux_dirname }}"
+
+- name: compiling zesarux (make clean)
+  command:
+    cmd: "make clean"
+    chdir: "/tmp/{{ zesarux_dirname }}"
+
+- name: compiling zesarux (make)
+  command:
+    cmd: "make"
+    chdir: "/tmp/{{ zesarux_dirname }}"
+
+- name: installing zesarux (make install)
+  command:
+    cmd: "make install"
+    chdir: "/tmp/{{ zesarux_dirname }}"
+  become: true
+
+- name: deleting zesarux source
+  command: "/usr/bin/rm -Rf {{ item }}"
+  with_items:
+    - "/tmp/{{ zesarux_tgz }}"
+    - "/tmp/{{ zesarux_dirname }}"
