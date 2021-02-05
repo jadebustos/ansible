@@ -5,3 +5,5 @@
     name: "{{ commodore_debs }}"
     state: present
     update_cache: yes
+  become: true
+  when: ansible_os_family == 'Debian'
