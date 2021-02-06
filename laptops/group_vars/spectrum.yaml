@@ -1,8 +1,8 @@
 ---
 
 # debian bullseye
-development_debs: ['autotools-dev', 'make', 'gcc']
-zesarux_debs: ['xorg-dev', 'libncurses-dev', 'libc6-dev']
+development_debs: ['autotools-dev', 'make', 'gcc', 'xorg-dev', 'libncurses-dev', 'libc6-dev', 'libaa1-dev', 'libcaca-dev', 'libasound2', 'libpulse-dev', 'libsdl-dev', 'libsndfile1-dev', 'libssl-dev']
+zesarux_debs: ['libaa1', 'libcaca', 'libasound2', 'pulseaudio', 'libsdl1.2debian', 'libsndfile1', 'openssl']
 
 # fedora 33
 development_rpms: ['autoconf', 'automake', 'make', 'gcc', 'xorg-x11-server-devel', 'ncurses-devel', 'glibc-devel', 'aalib-devel', 'libcaca-devel', 'alsa-lib-devel', 'pulseaudio-libs-devel', 'SDL-devel', 'libsndfile-devel', 'libXxf86vm-devel', 'openssl-devel']
