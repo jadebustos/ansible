@@ -1,8 +1,15 @@
 ---
 
-- name: installing development packages
+- name: installing development packages (Debian)
   apt:
     name: "{{ development_debs }}"
     state: present
   become: true
   when: ansible_os_family == 'Debian'
+
+- name: installing development packages (Fedora)
+  dnf:
+    name: "{{ development_rpms }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'RedHat'

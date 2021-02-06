@@ -1,11 +1,18 @@
 ---
 
-- name: installing zesarux packages
+- name: installing zesarux packages (Debian)
   apt:
     name: "{{ zesarux_debs }}"
     state: present
   become: true
   when: ansible_os_family == 'Debian'
+
+- name: installing zesarux packages (Fedora)
+  dnf:
+    name: "{{ zesarux_rpms }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'RedHat'
 
 - name: downloading zesarux source
   get_url:
