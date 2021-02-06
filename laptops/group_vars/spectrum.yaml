@@ -5,10 +5,13 @@ development_debs: ['autotools-dev', 'make', 'gcc']
 zesarux_debs: ['xorg-dev', 'libncurses-dev', 'libc6-dev']
 
 # fedora 33
-development_rpms: ['autoconf', 'automake', 'make', 'gcc']
-zesarux_rpms: ['xorg-x11-server-devel', 'ncurses-devel', 'glibc-devel']
+development_rpms: ['autoconf', 'automake', 'make', 'gcc', 'xorg-x11-server-devel', 'ncurses-devel', 'glibc-devel', 'aalib-devel', 'libcaca-devel', 'alsa-lib-devel', 'pulseaudio-libs-devel', 'SDL-devel', 'libsndfile-devel', 'libXxf86vm-devel', 'openssl-devel']
+zesarux_rpms: ['aalib', 'libcaca', 'alsa-lib', 'pulseaudio-libs', 'SDL', 'libsndfile', 'libXxf86vm', 'openssl']
 
 # zesarux
 zesarux_src: 'https://github.com/chernandezba/zesarux/releases/download/9.1/ZEsarUX_src-9.1.tar.gz'
 zesarux_dirname: 'ZEsarUX-9.1'
 zesarux_tgz: 'ZEsarUX_src-9.1.tar.gz'
+
+# compiling options
+zesarux_opts: '--enable-ssl --enable-memptr --enable-visualmem --enable-cpustats'
