@@ -1,5 +1,12 @@
 ---
 
+- name: download roms (ide bios)
+  get_url:
+    url: "https://www.msx.org/download/download/2013/02/ide250.zip"
+    dest: "~/.openMSX/share/systemroms/ide250.zip"
+    mode: 0644
+    setype: user_home_t
+
 - name: download roms (canon)
   get_url:
     url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Canon/{{ item }}"
