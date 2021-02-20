@@ -1,0 +1,10 @@
+---
+
+- name: install msx software
+  hosts: all
+  vars_files:
+    - "group_vars/msx.yaml"
+    - "group_vars/msx-roms.yaml"
+  gather_facts: true
+  roles:
+    - msx

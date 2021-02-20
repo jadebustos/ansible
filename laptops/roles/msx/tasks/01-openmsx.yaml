@@ -1,0 +1,20 @@
+---
+
+- name: installing openmsx (Fedora)
+  dnf:
+    name: "{{ openmsx_rpms }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'RedHat'
+
+- name: create directories
+  file:
+    path: "/home/{{ user }}/.openMSX/{{ item }}"
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    mode: 0755
+    setype: user_home_t
+    state: directory
+  become: true
+  with_items:
+    - "share/systemroms/"

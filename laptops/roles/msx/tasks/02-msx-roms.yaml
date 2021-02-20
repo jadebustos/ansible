@@ -1,0 +1,145 @@
+---
+
+- name: download roms (canon)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Canon/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Canon }}"
+
+- name: download roms (checkmark)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Checkmark/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Checkmark }}"
+
+- name: download roms (daewoo)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Daewoo/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Daewoo }}"
+
+- name: download roms (goldstar)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Goldstar/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Goldstar }}"
+
+- name: download roms (gradiente)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Gradiente/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Gradiente }}"
+
+- name: download roms (jvc)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/JVC/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ JVC }}"
+
+- name: download roms (mitsubishi)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Mitsubishi/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Mitsubishi }}"
+
+- name: download roms (modified msx systems)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Modified%20MSX%20Systems/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Modified_MSX_Systems }}"
+
+- name: download roms (national)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/National/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ National }}"
+
+- name: download roms (panasonic)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Panasonic/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Panasonic }}"
+
+- name: download roms (philips)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Philips/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Philips }}"
+
+- name: download roms (sanyo)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Sanyo/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Sanyo }}"
+
+- name: download roms (sharp_epcom)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Sharp_Epcom/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Sharp_Epcom }}"
+
+- name: download roms (sony)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Sony/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Sony }}"
+
+- name: download roms (spectravideo)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Spectravideo/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Spectravideo }}"
+
+- name: download roms (toshiba)
+  get_url:
+    url: "http://msx2.org/Funet%20(2006-05-28)/emulator/openMSX/System%20Roms/Toshiba/{{ item }}"
+    dest: "~/.openMSX/share/systemroms/{{ item  }}"
+    mode: 0644
+    setype: user_home_t
+  with_items:
+    - "{{ Toshiba }}"

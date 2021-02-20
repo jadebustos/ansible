@@ -1,0 +1,4 @@
+---
+
+- include_tasks: 01-openmsx.yaml
+- include_tasks: 02-msx-roms.yaml
