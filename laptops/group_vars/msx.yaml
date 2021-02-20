@@ -1,5 +1,6 @@
 ---
 
+# Fedora 33
 openmsx_rpms: ['openmsx', 'openmsx-catapult']
 
 user: 'jadebustos'
