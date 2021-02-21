@@ -3,6 +3,7 @@
 This playbook install MSX software:
 
 + Tested on Fedora 33
++ Tested on Debian Bullseye
 
 ## Software installed
 
