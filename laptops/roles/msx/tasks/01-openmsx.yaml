@@ -9,9 +9,9 @@
 
 - name: create directories
   file:
-    path: "/home/{{ user }}/.openMSX/{{ item }}"
-    owner: "{{ user }}"
-    group: "{{ user }}"
+    path: "~/.openMSX/{{ item }}"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: 0755
     setype: user_home_t
     state: directory
