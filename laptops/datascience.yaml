@@ -1,0 +1,9 @@
+---
+
+- name: install datascience stuff
+  hosts: all
+  vars_files:
+    - "group_vars/datascience.yaml"
+  gather_facts: true
+  roles:
+    - datascience
