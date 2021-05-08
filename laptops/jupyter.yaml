@@ -1,0 +1,9 @@
+---
+
+- name: install jupyter notebook
+  hosts: all
+  vars_files:
+    - "group_vars/jupyter.yaml"
+  gather_facts: false
+  roles:
+    - jupyter

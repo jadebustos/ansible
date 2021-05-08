@@ -1,0 +1,9 @@
+---
+
+- name: install latex
+  hosts: all
+  vars_files:
+    - "group_vars/latex.yaml"
+  gather_facts: false
+  roles:
+    - latex

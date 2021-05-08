@@ -1,0 +1,7 @@
+---
+
+latex_rpms: ['texlive-latex', 'texlive-babel', 'texlive-babel-spanish', 'texlive-float', 'texlive-eurosym', 'texlive-draftwatermark', 'texlive-mathabx', 'texlive-titling', 'texlive-colortbl', 'texlive-pdfpages', 'texlive-vmargin', 'texlive-glossaries', 'texlive-updmap-map', 'texlive-ec','texlive-mathabx-type1', 'texlive-makeindex', 'texlive-bibtex']
+
+latex_apa_rpms: ['texlive-apacite']
+
+latex_debs: ['texlive-base', 'texlive-binaries','texlive-latex-base', 'texlive-latex-extra', 'texlive-latex-recommended', 'texlive-lang-spanish', 'texlive-lang-english', 'texlive-science', 'texlive-bibtex-extra', 'texlive-fonts-extra']
