@@ -1,0 +1,9 @@
+---
+
+- name: 3d printing
+  hosts: all
+  vars_files:
+    - "group_vars/printing-3d.yaml"
+  gather_facts: true
+  roles:
+    - printing-3d

@@ -1,0 +1,8 @@
+---
+
+- name: installing software
+  apt:
+    name: "{{ software_debs }}"
+    state: present
+  become: true
+  when: ansible_os_family == 'Debian'
