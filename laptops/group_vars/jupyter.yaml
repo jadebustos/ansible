@@ -1,3 +1,0 @@
----
-
-jupyter_rpms: ['python3-jupyter-core', 'python3-ipython+notebook', 'python3-notebook']

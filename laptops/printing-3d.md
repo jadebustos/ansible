@@ -1,5 +1,5 @@
 # Printing 3D Software
 
-This playbook install software for 3D printing:
+This playbook install software for 3D printing.
 
-+ Tested on Debian Bullseye
+> ![INFORMATION](../imgs/information-icon.png) Tested on Debian Bullseye

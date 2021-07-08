@@ -1,3 +1,6 @@
 ---
 
 ds_debs: ['python3-pandas', 'jupyter-notebook', 'python3-jupyter-client', 'python3-jupyter-core', 'jupyter-core']
+ds_rpms: ['python3-notebook', 'python3-ipython+notebook','python3-jupyter-core', 'python-jupyter-filesystem', 
+          'python3-jupyter-client', 'python3-pandas', 'python3-pandas-datareader',
+          'python3-matplotlib', 'python3-matplotlib-tk', 'python3-matplotlib-data', 'python3-matplotlib-data-fonts']

@@ -1,9 +1,8 @@
 # MSX Software
 
-This playbook install MSX software:
+This playbook install MSX software.
 
-+ Tested on Fedora 33
-+ Tested on Debian Bullseye
+> ![INFORMATION](../imgs/information-icon.png) Tested on Debian Bullseye and Fedora 33.
 
 ## Software installed
 

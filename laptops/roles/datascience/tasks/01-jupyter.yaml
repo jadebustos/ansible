@@ -1,8 +1,15 @@
 ---
 
-- name: installing jupyter software
-  apts:
+- name: installing jupyter software (Debian)
+  apt:
     name: "{{ ds_debs }}"
     state: present
   become: true
   when: ansible_os_family == 'Debian'
+
+- name: installing jupyter software (Fedora)
+  dnf:
+    name: "{{ ds_rpms }}"
+    state: present
+  become: true
+  when: ansible_distribution == 'Fedora'

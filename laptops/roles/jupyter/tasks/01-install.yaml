@@ -1,8 +1,0 @@
----
-
-- name: installing jupyter rpms
-  dnf:
-    name: "{{ jupyter_rpms }}"
-    state: present
-  become: true
-  when: ansible_os_family == 'RedHat'

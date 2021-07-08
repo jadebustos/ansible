@@ -2,7 +2,7 @@
 
 This playbook install spectrum software:
 
-+ Tested on Debian Bullseye
+> ![INFORMATION](../imgs/information-icon.png) Tested on Debian Bullseye.
 
 ## Software installed
 
