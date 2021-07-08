@@ -1,9 +1,0 @@
----
-
-- name: install 3d printing software
-  dnf:
-    name: "{{ printing_rpms }}"
-    state: present
-    update_cache: yes
-  become: true
-  when: ansible_os_family == 'RedHat'

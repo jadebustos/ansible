@@ -1,9 +1,0 @@
----
-
-- name: install jupyter notebook
-  hosts: all
-  vars_files:
-    - "group_vars/3d-printing.yaml"
-  gather_facts: true
-  roles:
-    - 3d-printing
