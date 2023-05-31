@@ -6,3 +6,5 @@
 - include_tasks: 02-services.yaml
 
 - include_tasks: 03-firewall.yaml
+
+- include_tasks: 04-httpd.yaml

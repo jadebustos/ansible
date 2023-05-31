@@ -5,3 +5,6 @@ kickstart_iso_rpms: ['genisoimage', 'syslinux']
 kickstart_services: ['httpd']
 
 kickstart_fw_services: ['http', 'https']
+
+# directories for http to publish
+kickstart_httpd_dirs: ['/var/www/html/ks', '/var/www/html/ostree-rhel8', '/var/www/html/ostree-rhel9']

@@ -1,0 +1,13 @@
+---
+
+- name: create directories for http to publish
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+    setype: 'httpd_sys_content_t'
+  with_items:
+    - "{{ kickstart_httpd_dirs }}"
+  become: yes
