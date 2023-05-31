@@ -1,0 +1,7 @@
+---
+
+- name: install virtualization software
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - kvm

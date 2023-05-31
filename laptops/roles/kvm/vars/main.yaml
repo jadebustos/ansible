@@ -1,0 +1,6 @@
+---
+
+kvm_rpms: ['qemu-kvm', 'libvirt', 'virt-install', 'bridge-utils', 'virt-manager', 'libvirt-devel', 'virt-top', 'libguestfs-tools', 'guestfs-tools']
+cockpit_rpms: ['cockpit', 'cockpit-networkmanager', 'cockpit-packagekit', 'cockpit-selinux', 'cockpit-system', 'cockpit-ws', 'cockpit-machines']
+
+kvm_services: ['libvirtd', 'cockpit.socket']
