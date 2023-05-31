@@ -1,0 +1,10 @@
+---
+
+- name: enable services in firewall
+  ansible.posix.firewalld:
+    service: https
+    permanent: true
+    state: enabled
+  with_items:
+    - "{{ kvm_fw_services }}"
+  become: yes
