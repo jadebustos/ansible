@@ -1,0 +1,13 @@
+---
+
+- name: install the 'web server' package group
+  ansible.builtin.dnf:
+    name: '@Web Server'
+    state: present
+  become: yes
+
+- name: install packages for iso creation
+  ansible.builtin.dnf:
+    name: "{{ kickstart_iso_rpms }}"
+    state: present
+  become: yes

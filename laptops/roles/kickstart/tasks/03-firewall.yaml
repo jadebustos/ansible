@@ -1,0 +1,10 @@
+---
+
+- name: enable services in firewall
+  ansible.posix.firewalld:
+    service: "{{ item }}"
+    permanent: true
+    state: enabled
+  with_items:
+    - "{{ kickstart_fw_services }}"
+  become: yes

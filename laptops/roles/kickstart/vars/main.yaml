@@ -1,0 +1,7 @@
+---
+
+kickstart_iso_rpms: ['genisoimage', 'syslinux']
+
+kickstart_services: ['httpd']
+
+kickstart_fw_services: ['http', 'https']

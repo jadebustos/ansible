@@ -1,0 +1,7 @@
+---
+
+- name: install software to deploy linux hosts with kickstart
+  hosts: localhost
+  gather_facts: true
+  roles:
+    - kickstart

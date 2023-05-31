@@ -1,0 +1,8 @@
+---
+
+- include_tasks: 01-rpms.yaml
+  when: ansible_distribution == "Fedora"
+
+- include_tasks: 02-services.yaml
+
+- include_tasks: 03-firewall.yaml
