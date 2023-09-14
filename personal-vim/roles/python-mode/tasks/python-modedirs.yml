@@ -1,7 +1,0 @@
----
-- name: python-mode directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/python-mode
-    owner: jadebustos
-    group: jadebustos
-    state: directory

@@ -35,13 +35,3 @@
     name: "{{ printing_rpms }}"
     state: present
   become: yes
-
-- name: import fussion gpg key
-  command: "/usr/bin/rpm --import {{ rpmfusion_gpg_key }}"
-  become: yes
-
-- name: configure rpm fussion
-  dnf:
-    name: "{{ rpmfusion_rpm }}"
-    state: present
-  become: yes

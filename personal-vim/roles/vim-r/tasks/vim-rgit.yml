@@ -1,6 +1,0 @@
----
-- name: vim-r git repository cloning
-  git:
-    repo: https://github.com/vim-scripts/Vim-R-plugin.git
-    dest: /home/jadebustos/.vim/bundle/Vim-R-plugin
-    force: yes

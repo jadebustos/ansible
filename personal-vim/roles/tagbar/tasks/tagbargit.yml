@@ -1,6 +1,0 @@
----
-- name: tagbar git repository cloning
-  git:
-    repo: https://github.com/majutsushi/tagbar.git
-    dest: /home/jadebustos/.vim/bundle/tagbar
-    force: yes

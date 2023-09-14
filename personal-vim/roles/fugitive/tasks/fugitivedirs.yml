@@ -1,7 +1,0 @@
----
-- name: fugitive directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/vim-fugitive
-    owner: jadebustos
-    group: jadebustos
-    state: directory

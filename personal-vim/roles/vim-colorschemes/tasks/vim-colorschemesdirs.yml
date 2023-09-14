@@ -1,7 +1,0 @@
----
-- name: vim-colorschemes directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/vim-colorschemes
-    owner: jadebustos
-    group: jadebustos
-    state: directory

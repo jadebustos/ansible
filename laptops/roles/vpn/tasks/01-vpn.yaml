@@ -4,6 +4,7 @@
   dnf:
     name: "{{ vpn_rpms }}"
     state: present
+  become: yes
 
 - name: red hat vpn configuration
   template:
@@ -13,6 +14,7 @@
     group: root
     mode:  0600
     setype: NetworkManager_etc_rw_t
+  become: yes
 
 - name: copy ca certificate
   copy:
@@ -22,9 +24,11 @@
     group: root
     mode: 0644
     setype: cert_t
+  become: yes
 
 - name: restart networkmanager service
   systemd:
     name: NetworkManager
     state: restarted
     daemon_reload: yes
+  become: yes

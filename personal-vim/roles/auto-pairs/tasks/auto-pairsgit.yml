@@ -1,6 +1,0 @@
----
-- name: auto-pairs git repository cloning
-  git:
-    repo: https://github.com/jiangmiao/auto-pairs.git
-    dest: /home/jadebustos/.vim/bundle/auto-pairs
-    force: yes

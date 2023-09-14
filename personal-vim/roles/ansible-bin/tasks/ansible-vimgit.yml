@@ -1,6 +1,0 @@
----
-- name: ansible-vim git repository cloning
-  git:
-    repo: https://github.com/pearofducks/ansible-vim
-    dest: /home/jadebustos/.vim/bundle/ansible-vim
-    force: yes

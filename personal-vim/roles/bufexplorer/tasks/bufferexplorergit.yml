@@ -1,6 +1,0 @@
----
-- name: bufferexplorer git repository cloning
-  git:
-    repo: https://github.com/jlanzarotta/bufexplorer.git
-    dest: /home/jadebustos/.vim/bundle/bufexplorer
-    force: yes

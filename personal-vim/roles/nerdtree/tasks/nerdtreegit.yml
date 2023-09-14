@@ -1,6 +1,0 @@
----
-- name: nerdtree git repository cloning
-  git:
-    repo: https://github.com/scrooloose/nerdtree.git
-    dest: /home/jadebustos/.vim/bundle/nerdtree
-    force: yes

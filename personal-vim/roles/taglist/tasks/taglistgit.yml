@@ -1,6 +1,0 @@
----
-- name: taglist git repository cloning
-  git:
-    repo: https://github.com/vim-scripts/taglist.vim
-    dest: /home/jadebustos/.vim/bundle/taglist.vim
-    force: yes

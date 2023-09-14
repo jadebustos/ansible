@@ -6,4 +6,4 @@ vpn_redhat_gateway: 'ovpn-ams2.redhat.com'
 vpn_redhat_user: 'YOUR_USER_HERE'
 vpn_redhat_path: '/etc/NetworkManager/system-connections'
 
-vpn_rpms: ['NetworkManager-libreswan', 'NetworkManager-libreswan-gnome', 'NetworkManager-openconnect',  'NetworkManager-openconnect-gnome', 'openconnect',  'openvpn-2.4.9', 'vpnc-script', 'NetworkManager-fortisslvpn', 'NetworkManager-fortisslvpn-gnome', 'openfortivpn', 'NetworkManager-l2tp', 'NetworkManager-l2tp-gnome', 'NetworkManager-pptp', 'NetworkManager-pptp-gnome', 'NetworkManager-openvpn', 'NetworkManager-openvpn-gnome']
+vpn_rpms: ['NetworkManager-libreswan', 'NetworkManager-libreswan-gnome', 'NetworkManager-openconnect',  'NetworkManager-openconnect-gnome', 'openconnect',  'openvpn', 'vpnc-script', 'NetworkManager-fortisslvpn', 'NetworkManager-fortisslvpn-gnome', 'openfortivpn', 'NetworkManager-l2tp', 'NetworkManager-l2tp-gnome', 'NetworkManager-pptp', 'NetworkManager-pptp-gnome', 'NetworkManager-openvpn', 'NetworkManager-openvpn-gnome']

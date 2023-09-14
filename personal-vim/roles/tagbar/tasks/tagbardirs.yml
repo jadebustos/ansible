@@ -1,7 +1,0 @@
----
-- name: tagbar directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/tagbar
-    owner: jadebustos
-    group: jadebustos
-    state: directory

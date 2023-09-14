@@ -1,7 +1,0 @@
----
-- name: taglist directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/taglist.vim
-    owner: jadebustos
-    group: jadebustos
-    state: directory

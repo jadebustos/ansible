@@ -1,4 +1,0 @@
----
-# Fugitive plugin: (Git functions)
-- include: vim-rdirs.yml
-- include: vim-rgit.yml

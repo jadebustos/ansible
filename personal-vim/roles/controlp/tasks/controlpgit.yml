@@ -1,6 +1,0 @@
----
-- name: controlp git repository cloning
-  git:
-    repo: https://github.com/kien/ctrlp.vim
-    dest: /home/jadebustos/.vim/bundle/ctrlp.vim
-    force: yes

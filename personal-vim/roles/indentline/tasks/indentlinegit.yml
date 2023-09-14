@@ -1,6 +1,0 @@
----
-- name: indentline git repository cloning
-  git:
-    repo: https://github.com/Yggdroot/indentLine.git
-    dest: /home/jadebustos/.vim/bundle/indentLine
-    force: yes

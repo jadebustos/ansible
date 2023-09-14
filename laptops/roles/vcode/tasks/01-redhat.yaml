@@ -12,7 +12,7 @@
     group: root
     mode: 0644
     setype: system_conf_t
-  become:yes
+  become: yes
 
 - name: install vscode
   dnf:

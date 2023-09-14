@@ -1,7 +1,0 @@
----
-- name: nerdtree directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/nerdtree
-    owner: jadebustos
-    group: jadebustos
-    state: directory

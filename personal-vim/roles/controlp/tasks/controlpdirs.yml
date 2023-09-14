@@ -1,7 +1,0 @@
----
-- name: controlp directory creation
-  file:
-    path: /home/jadebustos/.vim/bundle/ctrlp.vim
-    owner: jadebustos
-    group: jadebustos
-    state: directory

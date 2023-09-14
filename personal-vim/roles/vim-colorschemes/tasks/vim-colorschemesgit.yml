@@ -1,6 +1,0 @@
----
-- name: vim-colorschemes git repository cloning
-  git:
-    repo: https://github.com/flazz/vim-colorschemes.git
-    dest: /home/jadebustos/.vim/bundle/vim-colorschemes
-    force: yes

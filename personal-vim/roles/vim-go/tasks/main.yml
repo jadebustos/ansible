@@ -1,4 +1,0 @@
----
-# Vim-Go: For Go lang programming
-- include: vim-godirs.yml
-- include: vim-gogit.yml
