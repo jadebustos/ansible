@@ -6,6 +6,12 @@
     state: present
   when: ansible_os_family == 'RedHat'
 
+- name: install bluetooth rpm packages
+  dnf:
+    name: "{{ bluetooth_rpms }}"
+    state: present
+  when: ansible_os_family == 'RedHat'
+
 - name: enable systemd services
   systemd:
     name: "{{ item }}"

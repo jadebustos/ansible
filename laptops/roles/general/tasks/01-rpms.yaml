@@ -5,33 +5,46 @@
     name: "{{ common_rpms }}"
     state: present
   become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: install bluetooth rpm packages
+  dnf:
+    name: "{{ bluetooth_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
 
 - name: install dev rpm packages
   dnf:
     name: "{{ dev_rpms }}"
     state: present
   become: yes
+  when: ansible_os_family == 'RedHat'
 
 - name: install gnome rpm packages
   dnf:
     name: "{{ gnome_rpms }}"
     state: present
   become: yes
+  when: ansible_os_family == 'RedHat'
 
 - name: install office rpm packages
   dnf:
     name: "{{ office_rpms }}"
     state: present
   become: yes
+  when: ansible_os_family == 'RedHat'
 
 - name: install webcam rpm packages
   dnf:
     name: "{{ webcam_rpms }}"
     state: present
   become: yes
+  when: ansible_os_family == 'RedHat'
 
 - name: install printing rpms
   dnf:
     name: "{{ printing_rpms }}"
     state: present
   become: yes
+  when: ansible_os_family == 'RedHat'
