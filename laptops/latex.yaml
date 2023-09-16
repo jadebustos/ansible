@@ -4,6 +4,6 @@
   hosts: all
   vars_files:
     - "group_vars/latex.yaml"
-  gather_facts: false
+  gather_facts: true
   roles:
     - latex

@@ -1,9 +1,12 @@
 ---
 
+# eliminados para fedora 38
+# 'texlive-updmap-map'
 latex_rpms: ['texlive-latex', 'texlive-babel', 'texlive-babel-spanish', 'texlive-float', 'texlive-eurosym', 
              'texlive-draftwatermark', 'texlive-mathabx', 'texlive-titling', 'texlive-colortbl', 'texlive-pdfpages', 
-             'texlive-vmargin', 'texlive-glossaries', 'texlive-updmap-map', 'texlive-ec','texlive-mathabx-type1', 
-             'texlive-makeindex', 'texlive-bibtex', 'texlive-tcolorbox', 'texlive-upquote', 'texlive-ulem']
+             'texlive-vmargin', 'texlive-glossaries', 'texlive-ec','texlive-mathabx-type1', 
+             'texlive-makeindex', 'texlive-bibtex', 'texlive-tcolorbox', 'texlive-upquote', 'texlive-ulem', 'texlive-apacite', 
+             'texlive-amscls', 'emacs']
 
 latex_apa_rpms: ['texlive-apacite']
 
