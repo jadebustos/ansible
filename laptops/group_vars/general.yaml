@@ -16,6 +16,7 @@ webcam_rpms: ['v4l-utils', 'cheese']
 dev_rpms: ['git', 'go', 'automake']
 gnome_rpms: ['virt-viewer', 'gnome-control-center', 'network-manager-applet', 'gnome-tweaks', 'gnome-abrt', 'gnome-system-monitor', 'gnome-backgrounds', 'gnome-backgrounds-extras', 'gnome-font-viewer', 'gnome-themes-standard', 'gnome-remote-desktop']
 office_rpms: ['firefox', 'gedit', 'libreoffice-core', 'libreoffice-base', 'libreoffice-data', 'libreoffice-calc', 'libreoffice-impress', 'libreoffice-math', 'libreoffice-writer','libreoffice-draw','libreoffice-help-es','libreoffice-langpack-es', 'libreoffice-opensymbol-fonts', 'libreoffice-gtk3', 'libreoffice-pdfimport', 'libreoffice-filters', 'chromium', 'gimp', 'keepassxc', 'thunderbird']
+pyenv_rpms: ['gcc', 'zlib-devel', 'bzip2', 'bzip2-devel', 'readline-devel', 'sqlite', 'sqlite-devel', 'openssl-devel', 'xz', 'xz-devel', 'libffi-devel']
 
 telegram_url: 'https://telegram.org/dl/desktop/linux'
 

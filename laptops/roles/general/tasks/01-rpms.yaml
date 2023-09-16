@@ -21,6 +21,13 @@
   become: yes
   when: ansible_os_family == 'RedHat'
 
+- name: install pyenv rpm packages
+  dnf:
+    name: "{{ pyenv_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
 - name: install gnome rpm packages
   dnf:
     name: "{{ gnome_rpms }}"
