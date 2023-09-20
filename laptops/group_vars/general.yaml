@@ -5,9 +5,10 @@ os_user: 'jadebustos'
 timezone: 'Europe/Madrid'
 
 systemd_services: ['firewalld', 'cockpit', 'chronyd', 'crond']
+disabled_services: ['httpd', 'sshd']
 
-rpmfusion_rpm: 'https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-33.noarch.rpm'
-rpmfusion_gpg_key: 'https://rpmfusion.org/keys?action=AttachFile&do=get&target=RPM-GPG-KEY-rpmfusion-free-fedora-2020'
+rpmfusion_rpm: 'https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm'
+rpmfusion_gpg_key: 'https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-38.noarch.rpm'
 
 common_rpms: ['ca-certificates', 'bind-utils', 'chrony', 'curl', 'vim', 'wget', 'telnet', 'net-tools', 'rsync', 'zsh', 'ftp', 'bash', 'bash-completion', 'mc', 'cockpit', 'cockpit-machines', 'cockpit-networkmanager', 'cockpit-packagekit', 'cockpit-selinux', 'cockpit-system', 'cockpit-ws', 'cronie-anacron']
 bluetooth_rpms: ['bluez', 'blueman']
@@ -17,6 +18,8 @@ dev_rpms: ['git', 'go', 'automake']
 gnome_rpms: ['virt-viewer', 'gnome-control-center', 'network-manager-applet', 'gnome-tweaks', 'gnome-abrt', 'gnome-system-monitor', 'gnome-backgrounds', 'gnome-backgrounds-extras', 'gnome-font-viewer', 'gnome-themes-standard', 'gnome-remote-desktop']
 office_rpms: ['firefox', 'gedit', 'libreoffice-core', 'libreoffice-base', 'libreoffice-data', 'libreoffice-calc', 'libreoffice-impress', 'libreoffice-math', 'libreoffice-writer','libreoffice-draw','libreoffice-help-es','libreoffice-langpack-es', 'libreoffice-opensymbol-fonts', 'libreoffice-gtk3', 'libreoffice-pdfimport', 'libreoffice-filters', 'chromium', 'gimp', 'keepassxc', 'thunderbird']
 pyenv_rpms: ['gcc', 'zlib-devel', 'bzip2', 'bzip2-devel', 'readline-devel', 'sqlite', 'sqlite-devel', 'openssl-devel', 'xz', 'xz-devel', 'libffi-devel']
+httpd_rpms: ['httpd', 'mod_ssl']
+codec_rpms: ['gstreamer1-plugin-openh264', 'gstreamer1-plugins-bad-free-extras', 'gstreamer1-plugins-bad-free-fluidsynth', 'gstreamer1-plugins-bad-free-wildmidi', 'gstreamer1-plugins-bad-free-zbar', 'gstreamer1-plugins-bad-freeworld', 'gstreamer1-plugins-good-extras']
 
 telegram_url: 'https://telegram.org/dl/desktop/linux'
 

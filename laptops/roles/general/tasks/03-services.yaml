@@ -10,9 +10,11 @@
   with_items:
     - "{{ systemd_services }}"
 
-- name: disable ssh
+- name: disable systemd services
   systemd:
-    name: sshd
+    name: "{{ item }}"
     enabled: no
     masked: no
   become: yes
+  with_items:
+    - "{{ disabled_services }}"

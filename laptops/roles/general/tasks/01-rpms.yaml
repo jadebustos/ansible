@@ -55,3 +55,31 @@
     state: present
   become: yes
   when: ansible_os_family == 'RedHat'
+
+- name: install httpd rpms
+  dnf:
+    name: "{{ httpd_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: install rpmfusion gpg key
+  dnf:
+    name: "{{ rpmfusion_gpg_key }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: install rpmfusion repository rpm
+  dnf:
+    name: "{{ rpmfusion_rpm }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: install codec rpms
+  dnf:
+    name: "{{ codec_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
