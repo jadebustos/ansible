@@ -19,7 +19,7 @@ gnome_rpms: ['virt-viewer', 'gnome-control-center', 'network-manager-applet', 'g
 office_rpms: ['firefox', 'gedit', 'libreoffice-core', 'libreoffice-base', 'libreoffice-data', 'libreoffice-calc', 'libreoffice-impress', 'libreoffice-math', 'libreoffice-writer','libreoffice-draw','libreoffice-help-es','libreoffice-langpack-es', 'libreoffice-opensymbol-fonts', 'libreoffice-gtk3', 'libreoffice-pdfimport', 'libreoffice-filters', 'chromium', 'gimp', 'keepassxc', 'thunderbird']
 pyenv_rpms: ['gcc', 'zlib-devel', 'bzip2', 'bzip2-devel', 'readline-devel', 'sqlite', 'sqlite-devel', 'openssl-devel', 'xz', 'xz-devel', 'libffi-devel']
 httpd_rpms: ['httpd', 'mod_ssl']
-codec_rpms: ['mozilla-openh264', 'gstreamer1-plugin-openh264', 'gstreamer1-plugins-bad-free-extras', 'gstreamer1-plugins-bad-free-fluidsynth', 'gstreamer1-plugins-bad-free-wildmidi', 'gstreamer1-plugins-bad-free-zbar', 'gstreamer1-plugins-bad-freeworld', 'gstreamer1-plugins-good-extras']
+codec_rpms: ['mozilla-openh264', 'gstreamer1-plugin-openh264', 'gstreamer1-plugins-bad-free', 'gstreamer1-plugins-bad-free-extras', 'gstreamer1-plugins-bad-free-fluidsynth', 'gstreamer1-plugins-bad-free-wildmidi', 'gstreamer1-plugins-bad-free-zbar', 'gstreamer1-plugins-bad-freeworld', 'gstreamer1-plugins-good-extras', 'gstreamer1-plugins-ugly', 'compat-ffmpeg4'] # ffmpeg
 
 telegram_url: 'https://telegram.org/dl/desktop/linux'
 
