@@ -1,0 +1,7 @@
+---
+
+- name: install pcsc rpms
+  ansible.builtin.dnf:
+    name: "{{ pcsc_rpms }}"
+    state: present
+  become: yes

@@ -1,6 +1,6 @@
 ---
 
-- name: install dnie rpm
+- name: install dnie rpms
   ansible.builtin.dnf:
     name: "{{ dnie_rpms }}"
     state: present

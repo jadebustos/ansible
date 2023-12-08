@@ -1,0 +1,9 @@
+---
+
+- include_tasks: 01-fedora.yaml
+  when: 
+    - ansible_os_family == 'RedHat'
+
+- include_tasks: 01-debian.yaml
+  when: 
+    - ansible_os_family == 'Debian'

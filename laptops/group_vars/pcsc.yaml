@@ -1,0 +1,5 @@
+---
+
+pcsc_rpms: ['perl', 'pcsc-tools', 'pcsc-lite', 'pcsc-tools-gscriptor']
+
+pcsc_debs: ['pinentry-gtk2', 'pcscd', 'libassuan0']

@@ -3,7 +3,9 @@
 - name: configure dnie
   hosts: all
   vars_files:
+    - "group_vars/pcsc.yaml"
     - "group_vars/dnie.yaml"
   gather_facts: true
   roles:
+    - pcsc
     - dnie

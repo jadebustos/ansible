@@ -1,7 +1,7 @@
 ---
 
-- name: install dnie debs
+- name: install pcsc debs
   ansible.builtin.apt:
-    name: "{{ dnie_debs }}"
+    name: "{{ pcsc_debs }}"
     state: present
   become: yes
