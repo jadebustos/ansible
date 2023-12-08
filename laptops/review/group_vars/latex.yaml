@@ -5,10 +5,10 @@
 latex_rpms: ['texlive-latex', 'texlive-babel', 'texlive-babel-spanish', 'texlive-float', 'texlive-eurosym', 
              'texlive-draftwatermark', 'texlive-mathabx', 'texlive-titling', 'texlive-colortbl', 'texlive-pdfpages', 
              'texlive-vmargin', 'texlive-glossaries', 'texlive-ec','texlive-mathabx-type1', 
-             'texlive-makeindex', 'texlive-bibtex', 'texlive-tcolorbox', 'texlive-upquote', 'texlive-ulem', 'texlive-apacite', 
-             'texlive-amscls', 'emacs']
+             'texlive-makeindex', 'texlive-bibtex', 'texlive-tcolorbox', 'texlive-upquote', 'texlive-ulem', 
+             'texlive-amscls', 'emacs', 'texlive-appendix', 'texlive-python', 'texlive-xwatermark', 'texlive-framed]
 
-latex_apa_rpms: ['texlive-apacite']
+latex_apa_rpms: ['texlive-apacite', 'texlive-biblatex-apa']
 
 latex_debs: ['texlive-base', 'texlive-binaries','texlive-latex-base', 'texlive-latex-extra', 'texlive-latex-recommended', 
              'texlive-lang-spanish', 'texlive-lang-english', 'texlive-science', 'texlive-bibtex-extra', 

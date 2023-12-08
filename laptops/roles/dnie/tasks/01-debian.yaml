@@ -1,0 +1,7 @@
+---
+
+- name: install dnie deb
+  ansible.builtin.apt:
+    name: "{{ dnie_debs }}"
+    state: present
+  become: yes

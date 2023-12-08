@@ -1,0 +1,6 @@
+---
+
+# https://www.dnielectronico.es/portaldnie/PRF1_Cons02.action?pag=REF_1112 
+dnie_rpms: 'https://www.dnielectronico.es/descargas/distribuciones_linux/libpkcs11-dnie-1.6.8-1.x86_64.rpm'
+
+dnie_debs: 'https://www.dnielectronico.es/descargas/distribuciones_linux/libpkcs11-dnie_1.6.8_amd64.deb'

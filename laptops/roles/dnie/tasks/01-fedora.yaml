@@ -1,0 +1,8 @@
+---
+
+- name: install dnie rpm
+  ansible.builtin.dnf:
+    name: "{{ dnie_rpms }}"
+    state: present
+    disable_gpg_check: true
+  become: yes

@@ -1,7 +1,6 @@
 ---
 
+# rpms a incluir libnsl idrac lab
 devel: ['make', 'gcc', 'gcc-c++']
-
-latex_rpm: ['texlive-draftwatermark', 'texlive-xwatermark', 'texlive-framed']
 
 utils_rpm: ['mc', 'screen', 'vim', 'curl', 'keepassxc', 'wireshark']
