@@ -1,0 +1,7 @@
+---
+
+- name: installing latex rpms
+  dnf:
+    name: "{{ latex_rpms }}"
+    state: present
+  become: true

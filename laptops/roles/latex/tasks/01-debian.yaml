@@ -1,0 +1,7 @@
+---
+
+ name: installing latex deb
+  apt:
+    name: "{{ latex_debs }}"
+    state: present
+  become: true
