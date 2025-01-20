@@ -7,7 +7,8 @@ latex_rpms: ['texlive-latex', 'texlive-babel', 'texlive-babel-spanish', 'texlive
              'texlive-vmargin', 'texlive-glossaries', 'texlive-ec','texlive-mathabx-type1', 
              'texlive-makeindex', 'texlive-bibtex', 'texlive-tcolorbox', 'texlive-upquote', 'texlive-ulem', 
              'texlive-amscls', 'emacs', 'texlive-appendix', 'texlive-python', 'texlive-xwatermark', 'texlive-framed', 
-             'texlive-xetex', 'texlive-parskip', 'texlive-adjustbox', 'texlive-soul', 'texlive-jknapltx', 'texlive-ucs']
+             'texlive-xetex', 'texlive-parskip', 'texlive-adjustbox', 'texlive-soul', 'texlive-jknapltx', 'texlive-ucs',
+             'texlive-preprint', 'texlive-lipsum', 'texlive-sectsty']
 
 latex_apa_rpms: ['texlive-apacite', 'texlive-biblatex-apa']
 
