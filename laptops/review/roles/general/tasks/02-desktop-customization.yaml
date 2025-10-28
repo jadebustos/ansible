@@ -34,6 +34,12 @@
   with_dict:
     - "{{ filesystems }}"
 
+- name: create local stuff directory
+  file:
+    path: ~/.local/share/backgrounds
+    state: directory
+    mode: '0755'
+
 - name: define backgrounds
   copy:
     src: "{{ item }}"
@@ -45,6 +51,8 @@
   become: yes
   with_items:
     - "cernicalos-backgrounds.xml"
+    - "suzukys-backgrounds.xml"
+    - "vitara-backgrounds.xml"
 
 - name: copy xml background images
   copy:
@@ -57,37 +65,38 @@
   become: yes
   with_items:
     - "cernicalos.xml"
+    - "suzukys.xml"
+    - "vitara.xml"    
 
 - name: copy background images
   copy:
     src: "{{ item }}"
-    dest: /usr/share/backgrounds/
-    owner: root
-    group: root
+    dest: ~/.local/share/backgrounds/
     mode: 0644
     setype: usr_t
-  become: yes
   with_items:
     - "cernicalos.png"
+    - "suzukys.png"
+    - "vitara.png"
 
 - name: change default background image
   lineinfile:
     path: /usr/share/glib-2.0/schemas/10_org.gnome.desktop.background.fedora.gschema.override
     regexp: '^picture-uri='
-    line: picture-uri='file:///usr/share/backgrounds/cernicalos.xml'
+    line: picture-uri='file:///usr/share/backgrounds/suzukys.xml'
   become: yes
 
 - name: compile gnome schemas
   shell: /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/
   become: yes
 
-- name: disable wayland
-  copy:
-    src: gdm-custom.conf
-    dest: /etc/gdm/custom.conf
-    owner: root
-    group: root
-    mode: 0644
-    setype: xdm_etc_t
-  become: yes
-  when: ansible_os_family == 'RedHat'
+# - name: disable wayland
+#   copy:
+#     src: gdm-custom.conf
+#     dest: /etc/gdm/custom.conf
+#     owner: root
+#     group: root
+#     mode: 0644
+#     setype: xdm_etc_t
+#   become: yes
+#   when: ansible_os_family == 'RedHat'

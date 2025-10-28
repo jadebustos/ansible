@@ -1,0 +1,16 @@
+<background>
+  <starttime>
+    <year>2025</year>
+    <month>10</month>
+    <day>28</day>
+    <hour>19</hour>
+    <minute>33</minute>
+    <second>58</second>
+  </starttime>
+<static>
+<duration>10000000000.0</duration>
+<file>
+  <size width="1600" height="1200">~/.local/share/backgrounds/suzukys.png</size>
+</file>
+</static>
+</background>

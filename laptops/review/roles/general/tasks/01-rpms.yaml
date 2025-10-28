@@ -67,6 +67,7 @@
   dnf:
     name: "{{ rpmfusion_gpg_key }}"
     state: present
+    disable_gpg_check: true
   become: yes
   when: ansible_os_family == 'RedHat'
 

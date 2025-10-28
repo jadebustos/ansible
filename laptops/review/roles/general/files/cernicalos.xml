@@ -10,7 +10,7 @@
 <static>
 <duration>10000000000.0</duration>
 <file>
-  <size width="1923" height="1079">/usr/share/backgrounds/cernicalos.png</size>
+  <size width="1923" height="1079">~/.local/share/backgrounds/cernicalos.png</size>
 </file>
 </static>
 </background>

@@ -1,0 +1,16 @@
+<background>
+  <starttime>
+    <year>2025</year>
+    <month>10</month>
+    <day>28</day>
+    <hour>19</hour>
+    <minute>34</minute>
+    <second>34</second>
+  </starttime>
+<static>
+<duration>10000000000.0</duration>
+<file>
+  <size width="1583" height="886">~/.local/share/backgrounds/vitara.png</size>
+</file>
+</static>
+</background>
