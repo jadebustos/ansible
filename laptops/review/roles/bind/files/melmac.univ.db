@@ -1,0 +1,12 @@
+@    IN  SOA  ns1.melmac.univ. admin.melmac.univ. (
+                  2025093001 ; Serial
+                  28800     ; Refresh (8 hours)
+                  7200      ; Retry (2 hours)
+                  360000    ; Expire (10 days)
+                  600       ; Negative Cache TTL (10 minutes)
+                  ) ;
+                  
+      	    IN  NS  ns1.melmac.univ.
+            IN  A   192.168.122.1
+
+ns1	IN	A	192.168.122.1

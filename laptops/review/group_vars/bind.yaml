@@ -1,0 +1,5 @@
+---
+
+bind_rpms: ['bind-utils', 'bind']
+
+bind_services: ['named']

@@ -1,0 +1,58 @@
+---
+
+- name: install bind rpm packages
+  dnf:
+    name: "{{ bind_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: disable bind services
+  systemd:
+    name: "{{ item }}"
+    enabled: no
+    masked: no
+  become: yes
+  with_items:
+    - "{{ bind_services }}"
+
+- name: copy bind configuration files
+  copy:
+    src: "{{ item }}"
+    dest: /etc/
+    owner: root
+    group: named
+    mode: 0640
+    setype: named_conf_t
+  become: yes
+  with_items:
+    - "named.conf"  
+  when: ansible_os_family == 'RedHat'   
+
+- name: copy bind zone configuration files
+  copy:
+    src: "{{ item }}"
+    dest: /etc/named/
+    owner: root
+    group: root
+    mode: 0644
+    setype: named_conf_t
+  become: yes
+  with_items:
+    - "122.168.192.in-addr.arpa.conf"
+    - "melmac.univ.conf"  
+  when: ansible_os_family == 'RedHat'
+
+- name: create bind zone data files
+  copy:
+    src: "{{ item }}"
+    dest: /var/named/
+    owner: root
+    group: named
+    mode: 0644
+    setype: named_zone_t
+  become: yes
+  with_items:
+    - "122.168.192.in-addr.arpa.db"
+    - "melmac.univ.db"  
+  when: ansible_os_family == 'RedHat'         

@@ -5,8 +5,10 @@
   vars_files:
     - "group_vars/general.yaml"
     - "group_vars/vpn.yaml"
+    - "group_vars/bind.yaml"
   gather_facts: true
   roles:
     - general
     - vcode
     - vpn
+    - bind
