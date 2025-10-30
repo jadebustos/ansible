@@ -1,3 +1,4 @@
 ---
 
 - include_tasks: 01-deploy.yaml
+- include_tasks: 02-utils.yaml

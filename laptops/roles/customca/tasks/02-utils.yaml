@@ -1,0 +1,37 @@
+---
+
+- name: create local bin directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+    setype: 'user_home_t'
+  with_items:
+    - ~/.stuff/bin
+
+- name: copy ca scripts
+  copy:
+    src: "{{ item }}"
+    dest: "~/.stuff/bin/{{ item }}"
+    mode: 0755
+    setype: user_home_t
+  with_items:
+    - 'cacreatecsr'
+    - 'caselfsigned'
+    - 'casigncsr'
+
+- name: add local bin to PATH
+  lineinfile:
+    path: ~/.bashrc
+    line: "{{ item }}"
+    state: present
+  with_items:
+    - 'export PATH="$HOME/.stuff/bin:$PATH"'
+
+# csr
+#/usr/bin/openssl req -new -newkey rsa:4096 -nodes -keyout server.key -out server.csr -config ~/.stuff/pki/tls/melmacca.conf -reqexts v3_req -subj "/C=SP/ST=Spain/L=Salamanca/O=MELMAC/CN=test.melmac.univ"
+
+# self-signed ca cert
+#/usr/bin/openssl req -x509 -sha256 -nodes -newkey rsa:4096 -keyout ~/.stuff/pki/cakey.pem -out ~/.stuff/pki/MELMACCA/cacert.pem -subj "/C=SP/ST=Spain/L=Salamanca/O=MELMAC/CN=Melmac CA" -extensions v3_ca
+
+#/usr/bin/openssl ca -config ~/.stuff/pki/tls/melmacca.conf -in server.csr -out server.crt

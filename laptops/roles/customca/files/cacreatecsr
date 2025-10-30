@@ -1,0 +1,31 @@
+#/bin/bash
+
+if [ $# -ne 3 ]
+then
+  echo "Usage $0 --help"
+  exit 1
+fi
+
+LONGOPTS=keyname:,csrname:,commonname:,help
+
+# Parse with GNU getopt
+# The eval set -- $opts ensures quoted values are preserved.
+opts=$(getopt --longoptions "$LONGOPTS" --name "$(basename "$0")" --options "" -- "$@")
+eval set -- "$opts"
+
+keyname=""
+csrname=""
+commonname=""
+
+while true; do
+  case "$1" in
+    --keyname)     keyname=$2; shift 2 ;;
+    --csrname)     csrname=$2; shift 2 ;;
+    --commonname)  commonname=$2; shift 2 ;;
+    --help)     echo "Usage: $0 --keyname VALUE --csrname VALUE --commonname VALUE"; exit 0 ;;
+    --)         shift; break ;;
+    *)          echo "Internal parsing error"; exit 2 ;;
+  esac
+done
+
+/usr/bin/openssl req -new -newkey rsa:4096 -nodes -keyout $keyname -out $csrname -config ~/.stuff/pki/tls/melmacca.conf -reqexts v3_req -subj "/C=SP/ST=Spain/L=Salamanca/O=MELMAC/CN=$commonname"
