@@ -3,12 +3,14 @@
 - name: install software (work laptop)
   hosts: all
   vars_files:
+    - "group_vars/bind.yaml"
+    - "group_vars/customca.yaml"  
     - "group_vars/general.yaml"
     - "group_vars/vpn.yaml"
-    - "group_vars/bind.yaml"
   gather_facts: true
   roles:
-    - general
-    - vcode
-    - vpn
-    - bind
+    # - general
+    # - vcode
+    # - vpn
+    # - bind
+    - customca

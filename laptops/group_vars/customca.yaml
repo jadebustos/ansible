@@ -1,0 +1,3 @@
+---
+
+openssl_rpms: ['openssl', 'openssl-devel', 'openssl-pkcs11']

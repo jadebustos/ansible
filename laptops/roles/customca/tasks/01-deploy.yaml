@@ -1,0 +1,52 @@
+---
+
+- name: install openssl rpm packages
+  dnf:
+    name: "{{ openssl_rpms }}"
+    state: present
+  become: yes
+  when: ansible_os_family == 'RedHat'
+
+- name: create ca directories
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0755'
+    setype: 'cert_t'
+  when: ansible_os_family == 'RedHat'
+  with_items:
+    - "~/.stuff/pki/"
+    - "~/.stuff/pki/tls"
+    - "~/.stuff/pki/MELMACCA/certs"
+    - "~/.stuff/pki/MELMACCA/crl"
+    - "~/.stuff/pki/MELMACCA/newcerts"
+    - "~/.stuff/pki/MELMACCA/private"
+
+- name: restrict perms for private key directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: '0700'
+    setype: 'cert_t'
+  when: ansible_os_family == 'RedHat'
+  with_items:
+    - "~/.stuff/pki/MELMACCA/private"
+
+- name: copy openssl ca configuration file
+  copy:
+    src: melmacca.conf
+    dest: ~/.stuff/pki/tls
+    mode: 0644
+    setype: cert_t
+  when: ansible_os_family == 'RedHat'    
+
+- name: copy ca configuration files
+  copy:
+    src: "{{ item }}"
+    dest: ~/.stuff/pki/MELMACCA
+    mode: 0644
+    setype: cert_t
+  with_items:
+    - index.txt
+    - serial
+  when: ansible_os_family == 'RedHat'     
