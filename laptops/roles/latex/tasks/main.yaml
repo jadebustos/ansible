@@ -7,3 +7,5 @@
 - include_tasks: 01-debian.yaml
   when: 
     - ansible_os_family == 'Debian'
+
+- include_tasks: 02-bibliography.yaml 

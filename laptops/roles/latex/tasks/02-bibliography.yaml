@@ -1,0 +1,20 @@
+---
+
+# - name: download zotero
+#   ansible.builtin.get_url:
+#     url: "{{ zotero_url }}"
+#     dest: /tmp
+
+- name: uncompress zotero
+  ansible.builtin.unarchive:
+    src: "{{ zotero_url }}"
+    dest: "{{ ansible_env.HOME }}/.stuff"
+    remote_src: yes
+
+- name: add zotero to PATH
+  lineinfile:
+    path: ~/.bashrc
+    line: "{{ item }}"
+    state: present
+  with_items:
+    - 'export PATH="$HOME/.stuff/Zotero_linux-x86_64:$PATH"'

@@ -15,3 +15,5 @@ latex_apa_rpms: ['texlive-apacite', 'texlive-biblatex-apa']
 latex_debs: ['texlive-base', 'texlive-binaries','texlive-latex-base', 'texlive-latex-extra', 'texlive-latex-recommended', 
              'texlive-lang-spanish', 'texlive-lang-english', 'texlive-science', 'texlive-bibtex-extra', 
              'texlive-fonts-extra', 'texlive-generic-recommended']
+
+zotero_url: 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64'

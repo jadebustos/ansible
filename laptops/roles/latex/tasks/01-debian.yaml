@@ -1,6 +1,6 @@
 ---
 
- name: installing latex deb
+- name: installing latex deb
   apt:
     name: "{{ latex_debs }}"
     state: present
