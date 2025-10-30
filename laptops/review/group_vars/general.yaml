@@ -30,6 +30,9 @@ filesystems:
   bcksecundario:
     fs_uuid: 'f5c8a595-59e0-4304-947c-678c14ef00a2'
     dir: '/media/work'
+  vms:
+    fs_uuid: 'ea08b050-8844-40ee-99f2-531b199b433c'
+    dir: '/media/vms'    
 
 scripts_backup: 
   laptop:
