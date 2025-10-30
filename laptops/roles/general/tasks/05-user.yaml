@@ -1,0 +1,8 @@
+---
+
+    - name: add groups to user {{ os_user }}
+      ansible.builtin.user:
+        name: "{{ os_user }}"
+        groups: "libvirt,dialout,video"
+        append: yes
+      become: yes

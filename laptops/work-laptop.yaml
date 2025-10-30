@@ -9,8 +9,8 @@
     - "group_vars/vpn.yaml"
   gather_facts: true
   roles:
-    # - general
+    - general
     # - vcode
     # - vpn
     # - bind
-    - customca
+    #- customca
