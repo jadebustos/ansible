@@ -33,9 +33,9 @@
     - "~/.stuff/pki/MELMACCA/private"
 
 - name: copy openssl ca configuration file
-  copy:
-    src: melmacca.conf
-    dest: ~/.stuff/pki/tls
+  template:
+    src: melmacca.conf.j2
+    dest: ~/.stuff/pki/tls/melmacca.conf
     mode: 0644
     setype: cert_t
   when: ansible_os_family == 'RedHat'    
@@ -50,3 +50,14 @@
     - index.txt
     - serial
   when: ansible_os_family == 'RedHat'     
+
+- name: create ca key and self-signed certificate
+  command: '/usr/bin/openssl req -x509 -sha256 -nodes -newkey rsa:4096 -keyout ~/.stuff/pki/MELMACCA/private/cakey.pem -out ~/.stuff/pki/MELMACCA/cacert.pem -subj "/C=SP/ST=Spain/L=Salamanca/O=MELMAC/CN=Melmac CA" -extensions v3_ca'
+
+# csr
+#/usr/bin/openssl req -new -newkey rsa:4096 -nodes -keyout server.key -out server.csr -config ~/.stuff/pki/tls/melmacca.conf -reqexts v3_req -subj "/C=SP/ST=Spain/L=Salamanca/O=MELMAC/CN=test.melmac.univ"
+
+# self-signed ca cert
+#/usr/bin/openssl req -x509 -sha256 -nodes -newkey rsa:4096 -keyout ~/.stuff/pki/cakey.pem -out ~/.stuff/pki/MELMACCA/cacert.pem -subj "/C=SP/ST=Spain/L=Salamanca/O=MELMAC/CN=Melmac CA" -extensions v3_ca
+
+#/usr/bin/openssl ca -config ~/.stuff/pki/tls/melmacca.conf -in server.csr -out server.crt

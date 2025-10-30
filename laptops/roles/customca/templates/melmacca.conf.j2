@@ -1,8 +1,12 @@
+[ ca ]
+
+default_ca = MELMACCA
+
 ####################################################################
 
 [ MELMACCA ]
 
-dir             = ~/.stuff/pki/MELMACCA       # Where everything is kept
+dir             = {{ ansible_env.HOME }}/.stuff/pki/MELMACCA       # Where everything is kept
 certs           = $dir/certs            # Where the issued certs are kept
 crl_dir         = $dir/crl              # Where the issued crl are kept
 database        = $dir/index.txt        # database index file.
