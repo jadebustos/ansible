@@ -1,10 +1,5 @@
 ---
 
-# - name: download zotero
-#   ansible.builtin.get_url:
-#     url: "{{ zotero_url }}"
-#     dest: /tmp
-
 - name: uncompress zotero
   ansible.builtin.unarchive:
     src: "{{ zotero_url }}"
