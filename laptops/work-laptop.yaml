@@ -10,9 +10,9 @@
     - "group_vars/customca.yaml"  
   gather_facts: true
   roles:
-    # - general
-    #- latex
-    # - vcode
+    - general
+    - latex
+    - vcode
     - vpn
-    # - bind
-    # - customca
+    - bind
+    - customca
