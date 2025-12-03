@@ -1,9 +1,24 @@
 ---
 
-vpn_redhat_name: 'Red Hat AMS2'
-vpn_redhat_cert: 'RH-IT-Root-CA.crt'
-vpn_redhat_gateway: 'ovpn-ams2.redhat.com'
-vpn_redhat_user: 'YOUR USER HERE'
+#vpn_redhat_name: 'Red Hat AMS2'
+#vpn_redhat_cert: 'RH-IT-Root-CA.crt'
+#vpn_redhat_gateway: 'ovpn-ams2.redhat.com'
+vpn_redhat_user: 'abustosp@redhat.com'
 vpn_redhat_path: '/etc/NetworkManager/system-connections'
-
+ca_path: '/etc/pki/tls/certs/'
+    
 vpn_rpms: ['NetworkManager-libreswan', 'NetworkManager-libreswan-gnome', 'NetworkManager-openconnect',  'NetworkManager-openconnect-gnome', 'openconnect',  'openvpn', 'vpnc-script', 'NetworkManager-fortisslvpn', 'NetworkManager-fortisslvpn-gnome', 'openfortivpn', 'NetworkManager-l2tp', 'NetworkManager-l2tp-gnome', 'NetworkManager-pptp', 'NetworkManager-pptp-gnome', 'NetworkManager-openvpn', 'NetworkManager-openvpn-gnome']
+
+vpns:
+  - name: 'Red Hat AMS2'
+    vpn_name: 'AMS2_VPN'
+    certificate: 'RH-IT-Root-CA.crt'
+    cipher: 'AES-256-CBC'
+    username: '{{ vpn_redhat_user }}'
+    gateway: 'ovpn-ams2.redhat.com'
+  - name: 'Red Hat Global VPN'
+    vpn_name: 'Global_VPN'
+    certificate: 'tls-ca-bundle.pem'
+    cipher: 'AES-256-CBC'
+    username: '{{ vpn_redhat_user }}'
+    gateway: 'ovpn.redhat.com'    

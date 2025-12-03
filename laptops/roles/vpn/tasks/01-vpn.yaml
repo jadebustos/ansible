@@ -9,22 +9,24 @@
 - name: red hat vpn configuration
   template:
     src: redhat.vpn.j2
-    dest: "{{ vpn_redhat_path }}/RedHat" 
+    dest: "{{ vpn_redhat_path }}/{{ item.vpn_name }}.nmconnection" 
     owner: root
     group: root
     mode:  0600
     setype: NetworkManager_etc_rw_t
   become: yes
+  loop: "{{ vpns }}"
 
 - name: copy ca certificate
   copy:
-    src: RH-IT-Root-CA.crt
-    dest: "/etc/pki/tls/certs/{{ vpn_redhat_cert }}"
+    src: "{{ item.certificate }}"
+    dest: "/etc/pki/tls/certs/{{ item.certificate }}"
     owner: root
     group: root
     mode: 0644
     setype: cert_t
   become: yes
+  loop: "{{ vpns }}"
 
 - name: restart networkmanager service
   systemd:

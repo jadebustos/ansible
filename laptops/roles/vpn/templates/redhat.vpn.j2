@@ -1,6 +1,5 @@
 [connection]
-id={{ vpn_redhat_name }}
-uuid=0ef6689b-faaf-497d-99d0-ddb853df5438
+id={{ item.vpn_name }}
 type=vpn
 autoconnect=false
 permissions=
@@ -10,13 +9,13 @@ service-type=org.freedesktop.NetworkManager.openvpn
 connection-type=password
 password-flags=2
 tunnel-mtu=1360
-cipher=AES-256-CBC
+cipher={{ item.cipher }}
 proto-tcp=yes
-remote={{ vpn_redhat_gateway }}
+remote={{ item.gateway }}
 reneg-seconds=0
 port=443
-ca=/etc/pki/tls/certs/{{ vpn_redhat_cert }}
-username={{ vpn_redhat_user }}
+ca=/etc/pki/tls/certs/{{ item.certificate }}
+username={{ item.username }}
 
 [ipv4]
 dns-search=
