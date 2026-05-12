@@ -12,8 +12,9 @@ latex_rpms: ['texlive-latex', 'texlive-babel', 'texlive-babel-spanish', 'texlive
 
 latex_apa_rpms: ['texlive-apacite', 'texlive-biblatex-apa']
 
+# 'texlive-generic-recommended'
 latex_debs: ['texlive-base', 'texlive-binaries','texlive-latex-base', 'texlive-latex-extra', 'texlive-latex-recommended', 
              'texlive-lang-spanish', 'texlive-lang-english', 'texlive-science', 'texlive-bibtex-extra', 
-             'texlive-fonts-extra', 'texlive-generic-recommended']
+             'texlive-fonts-extra']
 
 zotero_url: 'https://www.zotero.org/download/client/dl?channel=release&platform=linux-x86_64'
