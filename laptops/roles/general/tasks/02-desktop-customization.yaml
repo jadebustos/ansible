@@ -27,9 +27,12 @@
 
 - name: create local stuff directory
   file:
-    path: ~/.local/share/backgrounds
+    path: "/home/{{ os_user }}/.local/share/backgrounds"
     state: directory
+    owner: "{{ os_user }}"
+    group: "{{ os_user }}"
     mode: '0755'
+  become: yes
 
 - name: define backgrounds
   copy:
@@ -62,7 +65,7 @@
 - name: copy background images
   copy:
     src: "{{ item }}"
-    dest: ~/.local/share/backgrounds/
+    dest: "/home/{{ os_user }}/.local/share/backgrounds/"
     mode: 0644
     setype: usr_t
   with_items:
