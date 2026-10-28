@@ -1,0 +1,13 @@
+---
+
+- name: install software (work laptop)
+  hosts: all
+  vars_files:
+    - "group_vars/general.yaml"
+    - "group_vars/bind.yaml"
+    - "group_vars/customca.yaml"  
+  gather_facts: true
+  roles:
+    - general
+    - bind
+    - customca

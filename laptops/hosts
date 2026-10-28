@@ -1,7 +1,6 @@
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
-ansible_user=jadebustos
+ansible_user=abustosp
 
 [laptop]
-192.168.122.69
-#localhost ansible_connection=local
+localhost ansible_connection=local
