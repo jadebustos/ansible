@@ -7,9 +7,6 @@ timezone: 'Europe/Madrid'
 systemd_services: ['firewalld', 'cockpit', 'chronyd', 'crond']
 disabled_services: ['httpd', 'sshd']
 
-rpmfusion_rpm: 'https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-43.noarch.rpm'
-rpmfusion_gpg_key: 'https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-43.noarch.rpm'
-
 common_rpms: ['ca-certificates', 'bind-utils', 'chrony', 'curl', 'vim', 'wget', 'telnet', 'net-tools', 'rsync', 'zsh', 'ftp', 'bash', 'bash-completion', 'mc', 'cockpit', 'cockpit-machines', 'cockpit-networkmanager', 'cockpit-packagekit', 'cockpit-selinux', 'cockpit-system', 'cockpit-ws', 'cronie-anacron', 'strace', 'libguestfs-tools']
 bluetooth_rpms: ['bluez', 'blueman']
 #printing_rpms: ['cups', 'libjpeg-devel', 'cups-devel', 'cups-devel', 'libusb1-devel', 'sane-backends-devel', 'avahi-devel', 'avahi-tools', 'net-snmp-devel', 'openssl-devel', 'python3-PyQt4', 'libtool', 'rpm-build', 'python3-notify2']
@@ -21,8 +18,6 @@ office_rpms: ['firefox', 'gedit', 'libreoffice-core', 'libreoffice-base', 'libre
 pyenv_rpms: ['gcc', 'zlib-devel', 'bzip2', 'bzip2-devel', 'readline-devel', 'sqlite', 'sqlite-devel', 'openssl-devel', 'xz', 'xz-devel', 'libffi-devel']
 httpd_rpms: ['httpd', 'mod_ssl']
 codec_rpms: ['mozilla-openh264', 'gstreamer1-plugin-openh264', 'gstreamer1-plugins-bad-free', 'gstreamer1-plugins-bad-free-extras', 'gstreamer1-plugins-bad-free-fluidsynth', 'gstreamer1-plugins-bad-free-wildmidi', 'gstreamer1-plugins-bad-free-zbar', 'gstreamer1-plugins-bad-freeworld', 'gstreamer1-plugins-good-extras', 'gstreamer1-plugins-ugly', 'compat-ffmpeg4', 'libheif', 'ImageMagick', 'libheif-freeworld'] # ffmpeg
-
-telegram_url: 'https://telegram.org/dl/desktop/linux'
 
 filesystems:
   bckprimario:
