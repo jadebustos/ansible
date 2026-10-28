@@ -87,3 +87,21 @@
     line: 'export PATH="$HOME/.stuff/bin:$PATH"'
     state: present
 
+- name: create gpg directory
+  file:
+    path: "/home/{{ os_user }}/.gnupg"
+    state: directory
+    owner: "{{ os_user }}"
+    group: "{{ os_user }}"
+    mode: '0700'
+  become: yes
+    
+- name: create gpg agent config
+  file:
+    path: gpg-agent.conf
+    dest: "/home/{{ os_user }}/.gnupg/gpg-agent.conf"
+    state: directory
+    owner: "{{ os_user }}"
+    group: "{{ os_user }}"
+    mode: '0644'
+  become: yes
