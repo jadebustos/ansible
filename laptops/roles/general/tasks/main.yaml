@@ -6,4 +6,3 @@
 - include_tasks: 04-backup.yaml
 #- include_tasks: 05-user.yaml
 - include_tasks: 06-gpg.yaml
-
