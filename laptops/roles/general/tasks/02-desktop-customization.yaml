@@ -100,7 +100,6 @@
   file:
     path: gpg-agent.conf
     dest: "/home/{{ os_user }}/.gnupg/gpg-agent.conf"
-    state: present
     owner: "{{ os_user }}"
     group: "{{ os_user }}"
     mode: '0644'
