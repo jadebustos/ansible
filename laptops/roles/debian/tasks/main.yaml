@@ -1,4 +1,6 @@
 ---
 
 - include_tasks: 01-base.yaml
-- include_tasks: 02-x11-forward.yaml
+- include_tasks: 98-x11-forward.yaml
+- include_tasks: 98-gnupg.yaml
+- include_tasks: 99-services.yaml

@@ -1,9 +1,9 @@
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
+ansible_user=jadebustos
 
 [laptop]
-localhost ansible_connection=local ansible_user=jadebustos
+localhost ansible_connection=local 
 
 [fedora]
-localhost ansible_connection=local ansible_user=abustosp
-
+localhost ansible_connection=local

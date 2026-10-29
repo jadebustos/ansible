@@ -1,0 +1,17 @@
+---
+
+- name: create directory for gpg-agent configuration
+  file:
+    path: "/home/{{ ansible_user }}/.gnupg"
+    state: directory
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0700'
+
+- name: configure gnupg agent
+  copy:
+    src: gpg-agent.conf
+    dest: "/home/{{ ansible_user }}/.gnupg/gpg-agent.conf"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0600'
