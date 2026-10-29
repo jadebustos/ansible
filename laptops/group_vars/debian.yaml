@@ -1,0 +1,9 @@
+---
+
+utils_debs: ['mc', 'tmux', 'vim', 'curl', 'wget', 'xauth']
+gnome_debs: ['firefox-esr', 'firefox-esr-l10n-es-es', 'firefox-esr-l10n-en-gb', 'xdg-utils', 'papers']
+ds_debs: ['python3-pandas', 'jupyter-notebook', 'python3-jupyter-client', 'python3-jupyter-core', 'jupyter-core']
+dev_debs: ['git', 'make', 'ansible']
+latex_debs: ['texlive-base', 'texlive-binaries','texlive-latex-base', 'texlive-latex-extra', 'texlive-latex-recommended', 
+             'texlive-lang-spanish', 'texlive-lang-english', 'texlive-science', 'texlive-bibtex-extra', 
+             'texlive-fonts-extra']

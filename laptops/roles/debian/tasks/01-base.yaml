@@ -1,0 +1,13 @@
+---
+
+- name: install debs
+  ansible.builtin.apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ utils_debs }}"
+    - "{{ dev_debs }}"
+    - "{{ gnome_debs }}"
+    - "{{ latex_debs }}"
+    - "{{ ds_debs }}"
+  become: true

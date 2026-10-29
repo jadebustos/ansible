@@ -1,0 +1,9 @@
+---
+
+- name: install software
+  hosts: laptop
+  vars_files:
+    - "group_vars/debian.yaml"
+  gather_facts: true
+  roles:
+    - debian

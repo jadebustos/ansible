@@ -1,0 +1,18 @@
+---
+
+- name: configure x11 forwarding
+  copy:
+    src: 01-x11-forward.conf
+    dest: /etc/ssh/sshd_config.d/01-x11-forward.conf
+    owner: root
+    group: root
+    mode: '0644'
+  become: true
+
+- name: restart sshd service
+  systemd:
+    name: ssh
+    state: restarted
+    enabled: yes
+    masked: no
+  become: true
