@@ -9,7 +9,7 @@ ds_debs: ['python3-pandas', 'jupyter-notebook', 'python3-jupyter-client', 'pytho
 dev_debs: ['git', 'make', 'ansible', 'emacs']
 latex_debs: ['texlive-base', 'texlive-binaries','texlive-latex-base', 'texlive-latex-extra', 'texlive-latex-recommended', 
              'texlive-lang-spanish', 'texlive-lang-english', 'texlive-science', 'texlive-bibtex-extra', 
-             'texlive-fonts-extra']
+             'texlive-fonts-extra', 'aspell-es', 'wspanish myspell-es', 'ispanish hunspell-es-es', 'dictionaries-common']
 
 systemd_services: ['ssh', 'firewalld', 'NetworkManager']
              
